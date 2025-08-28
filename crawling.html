@@ -179,10 +179,7 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="Tugas.html">Tugas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="Pengantar-Web-Mining.html">Pengantar Web Mining</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="Pengantar-Web-Mining.html">Pengantar Web Mining</a></li>
 </ul>
 
     </div>
@@ -850,7 +847,7 @@ Abstract: The federated learning, characterized by multi-party collaborative tra
     <span class="n">keywords</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;data mining&quot;</span><span class="p">,</span> <span class="s2">&quot;machine learning&quot;</span><span class="p">,</span> <span class="s2">&quot;neural network&quot;</span><span class="p">]</span>
 
     <span class="k">for</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">keywords</span><span class="p">:</span>
-        <span class="c1"># Gunakan format q = &quot;keyword:kata kunci&quot; untuk pencarian yang lebih spesifik</span>
+        <span class="c1"># Gunakan format q=&quot;keyword:kata kunci&quot; untuk pencarian yang lebih spesifik</span>
         <span class="n">results</span> <span class="o">=</span> <span class="n">search_springer_api</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;keyword:</span><span class="si">{</span><span class="n">keyword</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="p">)</span>
         <span class="n">print_search_results</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">keyword</span><span class="p">)</span>
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># Jeda untuk menghindari over-request ke API</span>
