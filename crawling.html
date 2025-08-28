@@ -398,39 +398,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting sprynger
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading sprynger-0.4.1-py3-none-any.whl.metadata (5.8 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting lxml (from sprynger)
-  Downloading lxml-6.0.1-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: sprynger in /usr/local/python/3.12.1/lib/python3.12/site-packages (0.4.1)
+Requirement already satisfied: lxml in /usr/local/python/3.12.1/lib/python3.12/site-packages (from sprynger) (6.0.1)
 Requirement already satisfied: requests in /home/codespace/.local/lib/python3.12/site-packages (from sprynger) (2.32.4)
 Requirement already satisfied: urllib3 in /home/codespace/.local/lib/python3.12/site-packages (from sprynger) (2.5.0)
 Requirement already satisfied: platformdirs in /home/codespace/.local/lib/python3.12/site-packages (from sprynger) (4.3.8)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in /home/codespace/.local/lib/python3.12/site-packages (from requests-&gt;sprynger) (3.4.2)
+Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in /home/codespace/.local/lib/python3.12/site-packages (from requests-&gt;sprynger) (3.4.2)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /home/codespace/.local/lib/python3.12/site-packages (from requests-&gt;sprynger) (3.10)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /home/codespace/.local/lib/python3.12/site-packages (from requests-&gt;sprynger) (2025.7.9)
-Downloading sprynger-0.4.1-py3-none-any.whl (40 kB)
-Downloading lxml-6.0.1-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
-?25l   <span class=" -Color -Color-C237">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">0.0/5.3 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   <span class=" -Color -Color-Red">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">5.3/5.3 MB</span> <span class=" -Color -Color-Red">50.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: lxml, sprynger
-?25l
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━<span class=" -Color -Color-C237">╺━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">1/2</span> [sprynger]
-   <span class=" -Color -Color-Red">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">2/2</span> [sprynger]
-?25h
-Successfully installed lxml-6.0.1 sprynger-0.4.1
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">25.1.1</span> -&gt; <span class=" -Color -Color-Green">25.2</span>
@@ -875,7 +850,7 @@ Abstract: The federated learning, characterized by multi-party collaborative tra
     <span class="n">keywords</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;data mining&quot;</span><span class="p">,</span> <span class="s2">&quot;machine learning&quot;</span><span class="p">,</span> <span class="s2">&quot;neural network&quot;</span><span class="p">]</span>
 
     <span class="k">for</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">keywords</span><span class="p">:</span>
-        <span class="c1"># Gunakan format q=&quot;keyword:kata kunci&quot; untuk pencarian yang lebih spesifik</span>
+        <span class="c1"># Gunakan format q = &quot;keyword:kata kunci&quot; untuk pencarian yang lebih spesifik</span>
         <span class="n">results</span> <span class="o">=</span> <span class="n">search_springer_api</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;keyword:</span><span class="si">{</span><span class="n">keyword</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="p">)</span>
         <span class="n">print_search_results</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">keyword</span><span class="p">)</span>
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># Jeda untuk menghindari over-request ke API</span>
