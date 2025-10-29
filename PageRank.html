@@ -830,7 +830,7 @@ Jumlah edge dalam graph: 626
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span> <span class="c1"># Pastikan Anda sudah mengimpor pandas</span>
 
 <span class="c1"># Tentukan nama file yang akan dibaca</span>
-<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;link_keluar_fakultas_teknik.csv&#39;</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;semua_link_FT.csv&#39;</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="c1"># --- 1. Membaca file ---</span>
@@ -854,7 +854,7 @@ Jumlah edge dalam graph: 626
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Berhasil membaca file: link_keluar_fakultas_teknik.csv
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Berhasil membaca file: semua_link_FT.csv
 </pre></div>
 </div>
 </div>
@@ -863,7 +863,7 @@ Jumlah edge dalam graph: 626
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1️⃣ Baca file</span>
 <span class="n">edges</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
-    <span class="s2">&quot;link_keluar_fakultas_teknik.csv&quot;</span>
+    <span class="s2">&quot;semua_link_FT.csv&quot;</span>
 <span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kolom yang ada:&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">edges</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
 
@@ -876,8 +876,8 @@ Jumlah edge dalam graph: 626
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kolom yang ada: [&#39;No&#39;, &#39;Page&#39;, &#39;Link Keluar&#39;, &#39;Teks&#39;]
-Jumlah edges: 130
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kolom yang ada: [&#39;No&#39;, &#39;Page&#39;, &#39;Link Keluar&#39;]
+Jumlah edges: 5508
 </pre></div>
 </div>
 </div>
@@ -894,8 +894,8 @@ Jumlah edges: 130
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah node dalam graph: 34
-Jumlah edge dalam graph: 64
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah node dalam graph: 241
+Jumlah edge dalam graph: 2656
 </pre></div>
 </div>
 </div>
@@ -919,12 +919,12 @@ Jumlah edge dalam graph: 64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Top 5 PageRank tertinggi:
-                                                 Node  PageRank
-1             https://fttrunojoyo.perpustakaan.co.id/  0.029499
-2   https://drive.google.com/file/d/13vrMWMRLc51ya...  0.029499
-18                     http://hmm-ft.trunojoyo.ac.id/  0.029499
-3   https://drive.google.com/file/d/1p0IjDah2BT7MS...  0.029499
-4   https://drive.google.com/file/d/1xThmCp00FGmAW...  0.029499
+                                            Node  PageRank
+0                https://teknik.trunojoyo.ac.id/   0.00496
+2       https://teknik.trunojoyo.ac.id/about-us/   0.00496
+3        https://teknik.trunojoyo.ac.id/sekilas/   0.00496
+4  https://teknik.trunojoyo.ac.id/about-us/#visi   0.00496
+5  https://teknik.trunojoyo.ac.id/about-us/#ciri   0.00496
 </pre></div>
 </div>
 </div>
@@ -954,7 +954,7 @@ Jumlah edge dalam graph: 64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/4b32922d77b46aac5042c1dad503980fa24f5930f3a2389db9c4e9985aa20058.png" src="_images/4b32922d77b46aac5042c1dad503980fa24f5930f3a2389db9c4e9985aa20058.png" />
+<img alt="_images/5227bc34ac575fc8021b304bfc205f92e317c62945e7a2731f899cb1b064ad01.png" src="_images/5227bc34ac575fc8021b304bfc205f92e317c62945e7a2731f899cb1b064ad01.png" />
 </div>
 </div>
 </section>
