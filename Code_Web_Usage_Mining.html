@@ -1182,65 +1182,88 @@ Pratinjau data yang telah diubah (lihat kolom baru &#39;datetime_readable&#39;):
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="c1"># 1. Tentukan file input (file yang memiliki &#39;datetime_readable&#39;)</span>
+<span class="c1"># --- PARAMETER KONFIGURASI ---</span>
 <span class="n">file_name</span> <span class="o">=</span> <span class="s2">&quot;time_converted_NASA.csv&quot;</span>
-
-<span class="c1"># 2. Tentukan kolom-kolom yang akan kita gunakan</span>
-<span class="n">col_ip</span> <span class="o">=</span> <span class="s2">&quot;host&quot;</span>               <span class="c1"># Kolom untuk mengelompokkan sesi</span>
-<span class="n">col_time</span> <span class="o">=</span> <span class="s2">&quot;datetime_readable&quot;</span> <span class="c1"># Kolom untuk mengurutkan sesi</span>
-<span class="n">new_col_name</span> <span class="o">=</span> <span class="s2">&quot;SESSION&quot;</span>      <span class="c1"># Nama kolom sesi baru</span>
+<span class="n">col_ip</span> <span class="o">=</span> <span class="s2">&quot;host&quot;</span>               <span class="c1"># Kolom IP/Host</span>
+<span class="n">col_time</span> <span class="o">=</span> <span class="s2">&quot;datetime_readable&quot;</span> <span class="c1"># Kolom Waktu</span>
+<span class="n">url_col</span> <span class="o">=</span> <span class="s2">&quot;url&quot;</span>               <span class="c1"># Kolom URL asli</span>
+<span class="n">new_col_name</span> <span class="o">=</span> <span class="s2">&quot;SESSION_ID&quot;</span>   <span class="c1"># Nama kolom ID Sesi baru</span>
+<span class="n">url_id_col</span> <span class="o">=</span> <span class="s2">&quot;PAGE_ID&quot;</span>        <span class="c1"># NAMA KOLOM ID URL BARU</span>
+<span class="n">session_threshold_minutes</span> <span class="o">=</span> <span class="mi">30</span> <span class="c1"># Batas waktu inaktivitas (dalam menit)</span>
+<span class="c1"># ------------------------------</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Memuat data dari </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="c1"># 3. Muat dataset</span>
-    <span class="c1"># PENTING: Kita gunakan parse_dates=[col_time]</span>
-    <span class="c1"># agar pandas langsung membacanya sebagai objek datetime</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="n">col_time</span><span class="p">])</span>
+    <span class="c1"># 1. Muat dataset</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+
 <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: File </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2"> tidak ditemukan.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pastikan Anda sudah menjalankan skrip konversi &#39;time&#39; sebelumnya.&quot;</span><span class="p">)</span>
-    <span class="n">exit</span><span class="p">()</span>
-<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error saat membaca </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">. Cek kolom &#39;</span><span class="si">{</span><span class="n">col_time</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Detail: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">exit</span><span class="p">()</span>
 
+<span class="c1"># 2. Periksa kolom wajib dan koreksi tipe data Waktu</span>
+<span class="k">if</span> <span class="n">col_ip</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="ow">or</span> <span class="n">col_time</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="ow">or</span> <span class="n">url_col</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: Kolom &#39;</span><span class="si">{</span><span class="n">col_ip</span><span class="si">}</span><span class="s2">&#39;, &#39;</span><span class="si">{</span><span class="n">col_time</span><span class="si">}</span><span class="s2">&#39;, atau &#39;</span><span class="si">{</span><span class="n">url_col</span><span class="si">}</span><span class="s2">&#39; tidak ditemukan.&quot;</span><span class="p">)</span>
+    <span class="n">exit</span><span class="p">()</span>
 
-<span class="c1"># 4. Periksa apakah kolom yang diperlukan ada</span>
-<span class="k">if</span> <span class="n">col_ip</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="ow">and</span> <span class="n">col_time</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mengkonversi kolom &#39;</span><span class="si">{</span><span class="n">col_time</span><span class="si">}</span><span class="s2">&#39; menjadi tipe datetime...&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="n">col_time</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col_time</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="n">col_time</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    <span class="c1"># 5. BUAT KOLOM SESSION (Logika yang sama seperti sebelumnya)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Membuat kolom &#39;</span><span class="si">{</span><span class="n">new_col_name</span><span class="si">}</span><span class="s2">&#39; berdasarkan &#39;</span><span class="si">{</span><span class="n">col_ip</span><span class="si">}</span><span class="s2">&#39; unik...&quot;</span><span class="p">)</span>
-    <span class="n">df</span><span class="p">[</span><span class="n">new_col_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col_ip</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="c1"># 3. IMPLEMENTASI ID MAPPING (Mengubah URL menjadi ID)</span>
+<span class="c1"># ----------------------------------------------------</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Membuat kolom &#39;</span><span class="si">{</span><span class="n">url_id_col</span><span class="si">}</span><span class="s2">&#39; sebagai ID unik (angka) untuk setiap URL...&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="n">url_id_col</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">url_col</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">url_mapping_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="n">url_col</span><span class="p">,</span> <span class="n">url_id_col</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="n">url_id_col</span><span class="p">)</span>
+<span class="n">url_mapping_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;url_page_id_mapping.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pemetaan URL ke ID disimpan sebagai: url_page_id_mapping.csv&quot;</span><span class="p">)</span>
 
-    <span class="c1"># 6. Urutkan data berdasarkan SESSION, lalu WAKTU</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mengurutkan data berdasarkan &#39;</span><span class="si">{</span><span class="n">new_col_name</span><span class="si">}</span><span class="s2">&#39; dan &#39;</span><span class="si">{</span><span class="n">col_time</span><span class="si">}</span><span class="s2">&#39;...&quot;</span><span class="p">)</span>
-    <span class="n">df_sorted</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">new_col_name</span><span class="p">,</span> <span class="n">col_time</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># 4. IMPLEMENTASI SESSIONIZATION BERBASIS WAKTU</span>
+<span class="c1"># ---------------------------------------------</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Menerapkan logika sessionization berbasis waktu...&quot;</span><span class="p">)</span>
+<span class="n">df_sorted</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">col_ip</span><span class="p">,</span> <span class="n">col_time</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_sorted</span><span class="p">[</span><span class="s1">&#39;time_diff&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_sorted</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">col_ip</span><span class="p">)[</span><span class="n">col_time</span><span class="p">]</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
+<span class="n">session_threshold</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">session_threshold_minutes</span><span class="si">}</span><span class="s1"> minutes&#39;</span><span class="p">)</span>
+<span class="n">df_sorted</span><span class="p">[</span><span class="s1">&#39;new_session_flag&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_sorted</span><span class="p">[</span><span class="s1">&#39;time_diff&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">session_threshold</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df_sorted</span><span class="p">[</span><span class="s1">&#39;time_diff&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">())</span>
+<span class="n">df_sorted</span><span class="p">[</span><span class="s1">&#39;SESSION_NUM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_sorted</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">col_ip</span><span class="p">)[</span><span class="s1">&#39;new_session_flag&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+<span class="n">df_sorted</span><span class="p">[</span><span class="n">new_col_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_sorted</span><span class="p">[</span><span class="n">col_ip</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">df_sorted</span><span class="p">[</span><span class="s1">&#39;SESSION_NUM&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 
-    <span class="c1"># 7. Hapus kolom &#39;time&#39; (timestamp angka) yang asli agar rapi</span>
-    <span class="k">if</span> <span class="s1">&#39;time&#39;</span> <span class="ow">in</span> <span class="n">df_sorted</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Menghapus kolom &#39;time&#39; (timestamp unix) asli...&quot;</span><span class="p">)</span>
-        <span class="n">df_sorted</span> <span class="o">=</span> <span class="n">df_sorted</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">])</span>
+<span class="c1"># 5. Pembersihan kolom</span>
+<span class="n">df_sorted</span> <span class="o">=</span> <span class="n">df_sorted</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time_diff&#39;</span><span class="p">,</span> <span class="s1">&#39;new_session_flag&#39;</span><span class="p">,</span> <span class="s1">&#39;SESSION_NUM&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s1">&#39;time&#39;</span> <span class="ow">in</span> <span class="n">df_sorted</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span> <span class="n">df_sorted</span> <span class="o">=</span> <span class="n">df_sorted</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">])</span>
+<span class="k">if</span> <span class="s1">&#39;Unnamed: 0&#39;</span> <span class="ow">in</span> <span class="n">df_sorted</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span> <span class="n">df_sorted</span> <span class="o">=</span> <span class="n">df_sorted</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">])</span>
 
-    <span class="c1"># 8. Simpan DataFrame LENGKAP yang sudah diurutkan</span>
-    <span class="n">output_filename</span> <span class="o">=</span> <span class="s2">&quot;session_data_full_NASA.csv&quot;</span>
+<span class="c1"># =========================================================================</span>
+<span class="c1"># 6. MEMBUAT MATRIKS FREKUENSI SESI-HALAMAN (Sesuai Permintaan)</span>
+<span class="c1"># =========================================================================</span>
 
-    <span class="c1"># --- INI YANG DIUBAH ---</span>
-    <span class="c1"># Kita ubah sep=&#39;;&#39; (titik-koma) menjadi sep=&#39;,&#39; (koma)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Menyimpan data ke </span><span class="si">{</span><span class="n">output_filename</span><span class="si">}</span><span class="s2"> dengan pemisah KOMA (&#39;,&#39;)...&quot;</span><span class="p">)</span>
-    <span class="n">df_sorted</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_filename</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
-    <span class="c1"># -------------------------</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=======================================================&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Membuat Matriks Frekuensi Sesi-Halaman (</span><span class="si">{</span><span class="n">new_col_name</span><span class="si">}</span><span class="s2"> vs </span><span class="si">{</span><span class="n">url_id_col</span><span class="si">}</span><span class="s2">)...&quot;</span><span class="p">)</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Berhasil! Kolom &#39;</span><span class="si">{</span><span class="n">new_col_name</span><span class="si">}</span><span class="s2">&#39; telah ditambahkan.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File baru disimpan sebagai: </span><span class="si">{</span><span class="n">output_filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Pratinjau data baru (menampilkan kolom yang Anda minta):&quot;</span><span class="p">)</span>
+<span class="c1"># Menggunakan pivot_table untuk menghitung frekuensi</span>
+<span class="c1"># index=SESSION_ID (Baris), columns=PAGE_ID (Kolom), aggfunc=&#39;size&#39; (menghitung jumlah item)</span>
+<span class="n">df_matrix</span> <span class="o">=</span> <span class="n">df_sorted</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+    <span class="n">index</span><span class="o">=</span><span class="n">new_col_name</span><span class="p">,</span>
+    <span class="n">columns</span><span class="o">=</span><span class="n">url_id_col</span><span class="p">,</span>
+    <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;size&#39;</span><span class="p">,</span>
+    <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span> <span class="c1"># Mengisi nilai yang tidak ada (tidak dikunjungi) dengan 0</span>
+<span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 
-    <span class="c1"># Tampilkan pratinjau hanya dengan kolom yang diminta agar mudah dilihat</span>
-    <span class="n">preview_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">new_col_name</span><span class="p">,</span> <span class="n">col_ip</span><span class="p">,</span> <span class="n">col_time</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">df_sorted</span><span class="p">[</span><span class="n">preview_cols</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="c1"># Mengubah nama kolom PAGE_ID (angka) menjadi format yang lebih deskriptif (PAGE_1, PAGE_2, dll)</span>
+<span class="c1"># Catatan: Kolom PAGE_ID yang lama sekarang adalah nama kolom (angka)</span>
+<span class="n">new_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">new_col_name</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;PAGE_</span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_matrix</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">col</span> <span class="o">!=</span> <span class="n">new_col_name</span><span class="p">]</span>
+<span class="n">df_matrix</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">new_cols</span>
 
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: Kolom &#39;</span><span class="si">{</span><span class="n">col_ip</span><span class="si">}</span><span class="s2">&#39; atau &#39;</span><span class="si">{</span><span class="n">col_time</span><span class="si">}</span><span class="s2">&#39; tidak ditemukan di </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="n">output_filename_matrix</span> <span class="o">=</span> <span class="s2">&quot;session_page_frequency_matrix_NASA.csv&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Menyimpan Matriks Frekuensi ke </span><span class="si">{</span><span class="n">output_filename_matrix</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+<span class="n">df_matrix</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_filename_matrix</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks Frekuensi Sesi-Halaman (Sesi vs Frekuensi Kunjungan Halaman):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_matrix</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=======================================================&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks Frekuensi berhasil dibuat dan disimpan sebagai: </span><span class="si">{</span><span class="n">output_filename_matrix</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1248,32 +1271,45 @@ Pratinjau data yang telah diubah (lihat kolom baru &#39;datetime_readable&#39;):
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Memuat data dari time_converted_NASA.csv...
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipython-input-1063200428.py:16: DtypeWarning: Columns (0) have mixed types. Specify dtype option on import or set low_memory=False.
-  df = pd.read_csv(file_name, sep=&#39;;&#39;, parse_dates=[col_time])
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipython-input-1569342024.py:16: DtypeWarning: Columns (0) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(file_name, sep=&#39;;&#39;)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Membuat kolom &#39;SESSION&#39; berdasarkan &#39;host&#39; unik...
-Mengurutkan data berdasarkan &#39;SESSION&#39; dan &#39;datetime_readable&#39;...
-Menghapus kolom &#39;time&#39; (timestamp unix) asli...
-Menyimpan data ke session_data_full_NASA.csv dengan pemisah KOMA (&#39;,&#39;)...
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mengkonversi kolom &#39;datetime_readable&#39; menjadi tipe datetime...
+Membuat kolom &#39;PAGE_ID&#39; sebagai ID unik (angka) untuk setiap URL...
+Pemetaan URL ke ID disimpan sebagai: url_page_id_mapping.csv
+Menerapkan logika sessionization berbasis waktu...
 
-Berhasil! Kolom &#39;SESSION&#39; telah ditambahkan.
-File baru disimpan sebagai: session_data_full_NASA.csv
+=======================================================
+Membuat Matriks Frekuensi Sesi-Halaman (SESSION_ID vs PAGE_ID)...
+Menyimpan Matriks Frekuensi ke session_page_frequency_matrix_NASA.csv...
 
-Pratinjau data baru (menampilkan kolom yang Anda minta):
-   SESSION         host   datetime_readable  \
-0        1  ***.novo.dk 1995-07-11 12:17:09   
-1        1  ***.novo.dk 1995-07-11 12:17:48   
-2        1  ***.novo.dk 1995-07-11 12:23:01   
-3        1  ***.novo.dk 1995-08-09 07:02:48   
-4        1  ***.novo.dk 1995-08-09 07:05:38   
+Matriks Frekuensi Sesi-Halaman (Sesi vs Frekuensi Kunjungan Halaman):
+                          SESSION_ID  PAGE_1  PAGE_2  PAGE_3  PAGE_4  PAGE_5  \
+0                      ***.novo.dk_1       0       0       0       0       0   
+1                      ***.novo.dk_2       0       0       0       0       0   
+2                   007.thegap.com_1       0       0       0       0       0   
+3                   007.thegap.com_2       0       0       0       0       0   
+4  01-dynamic-c.wokingham.luna.net_1       0       0       0       0       0   
 
-                                            url  
-0                                     /ksc.html  
-1               /shuttle/missions/missions.html  
-2     /shuttle/resources/orbiters/columbia.html  
-3  /shuttle/missions/sts-69/mission-sts-69.html  
-4               /shuttle/countdown/liftoff.html  
+   PAGE_6  PAGE_7  PAGE_8  PAGE_9  ...  PAGE_103  PAGE_104  PAGE_105  \
+0       0       0       0       0  ...         0         0         0   
+1       0       0       0       0  ...         0         0         0   
+2       0       0       0       0  ...         0         0         0   
+3       0       0       0       0  ...         0         0         0   
+4       0       0       0       0  ...         0         0         0   
+
+   PAGE_106  PAGE_107  PAGE_108  PAGE_109  PAGE_110  PAGE_111  PAGE_112  
+0         0         0         0         0         0         0         0  
+1         0         0         0         0         0         0         0  
+2         0         0         0         0         0         0         0  
+3         0         0         0         0         0         0         0  
+4         0         0         0         0         0         0         0  
+
+[5 rows x 113 columns]
+=======================================================
+
+Matriks Frekuensi berhasil dibuat dan disimpan sebagai: session_page_frequency_matrix_NASA.csv
 </pre></div>
 </div>
 </div>
@@ -1282,100 +1318,92 @@ Pratinjau data baru (menampilkan kolom yang Anda minta):
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-<span class="c1"># 1. Tentukan file input (file yang memiliki &#39;datetime_readable&#39;)</span>
-<span class="n">file_name</span> <span class="o">=</span> <span class="s2">&quot;time_converted_NASA.csv&quot;</span>
+<span class="c1"># --- PARAMETER KONFIGURASI ---</span>
+<span class="c1"># File Matriks Frekuensi yang dihasilkan dari langkah sebelumnya</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="s2">&quot;session_page_frequency_matrix_NASA_Benar.csv&quot;</span>
+<span class="n">session_id_col</span> <span class="o">=</span> <span class="s2">&quot;SESSION_ID&quot;</span>
+<span class="n">host_col</span> <span class="o">=</span> <span class="s2">&quot;HOST_ID&quot;</span> <span class="c1"># Nama kolom baru untuk ID Pengguna/Host</span>
+<span class="c1"># ------------------------------</span>
 
-<span class="c1"># 2. Tentukan kolom-kolom yang akan kita gunakan</span>
-<span class="n">col_ip</span> <span class="o">=</span> <span class="s2">&quot;host&quot;</span>               <span class="c1"># Kolom untuk mengelompokkan sesi</span>
-<span class="n">col_time</span> <span class="o">=</span> <span class="s2">&quot;datetime_readable&quot;</span> <span class="c1"># Kolom untuk mengurutkan sesi</span>
-<span class="n">new_col_name</span> <span class="o">=</span> <span class="s2">&quot;SESSION&quot;</span>      <span class="c1"># Nama kolom sesi baru</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Memuat data dari </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Memuat Matriks Frekuensi dari </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="c1"># 3. Muat dataset (pemisah asli adalah &#39;;&#39;)</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="n">col_time</span><span class="p">])</span>
+    <span class="c1"># 1. Muat Matriks Frekuensi</span>
+    <span class="n">df_matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: File </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2"> tidak ditemukan.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pastikan Anda sudah menjalankan skrip konversi &#39;time&#39; sebelumnya.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: File </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2"> tidak ditemukan. Pastikan file sudah ada dan nama file sudah benar.&quot;</span><span class="p">)</span>
     <span class="n">exit</span><span class="p">()</span>
-<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error saat membaca </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">. Cek kolom &#39;</span><span class="si">{</span><span class="n">col_time</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Detail: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error saat membaca file CSV: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">exit</span><span class="p">()</span>
 
+<span class="c1"># 2. Ekstraksi ID Host/IP dari SESSION_ID</span>
+<span class="c1"># SESSION_ID memiliki format: [HOST_ID]_[SESSION_NUM] (misal: ***.novo.dk_1)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mengekstrak ID Pengguna/Host dari kolom &#39;</span><span class="si">{</span><span class="n">session_id_col</span><span class="si">}</span><span class="s2">&#39;...&quot;</span><span class="p">)</span>
 
-<span class="c1"># 4. Periksa apakah kolom yang diperlukan ada</span>
-<span class="k">if</span> <span class="n">col_ip</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="ow">and</span> <span class="n">col_time</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+<span class="c1"># Ambil bagian pertama (sebelum underscore terakhir) sebagai ID Host.</span>
+<span class="c1"># Contoh: ***.novo.dk_1 -&gt; ***.novo.dk</span>
+<span class="n">df_matrix</span><span class="p">[</span><span class="n">host_col</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_matrix</span><span class="p">[</span><span class="n">session_id_col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
 
-    <span class="c1"># 5. BUAT KOLOM SESSION (Logika yang sama seperti sebelumnya)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Membuat kolom &#39;</span><span class="si">{</span><span class="n">new_col_name</span><span class="si">}</span><span class="s2">&#39; berdasarkan &#39;</span><span class="si">{</span><span class="n">col_ip</span><span class="si">}</span><span class="s2">&#39; unik...&quot;</span><span class="p">)</span>
-    <span class="n">df</span><span class="p">[</span><span class="n">new_col_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col_ip</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="c1"># Periksa apakah ekstraksi berhasil (opsional, tapi bagus)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">df_matrix</span><span class="p">[</span><span class="n">host_col</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">or</span> <span class="n">df_matrix</span><span class="p">[</span><span class="n">host_col</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">df_matrix</span><span class="p">[</span><span class="n">session_id_col</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Peringatan: Ekstraksi HOST_ID mungkin tidak berjalan optimal. Format SESSION_ID mungkin tidak standar.&quot;</span><span class="p">)</span>
 
-    <span class="c1"># 6. Urutkan data berdasarkan SESSION, lalu WAKTU</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mengurutkan data berdasarkan &#39;</span><span class="si">{</span><span class="n">new_col_name</span><span class="si">}</span><span class="s2">&#39; dan &#39;</span><span class="si">{</span><span class="n">col_time</span><span class="si">}</span><span class="s2">&#39;...&quot;</span><span class="p">)</span>
-    <span class="n">df_sorted</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">new_col_name</span><span class="p">,</span> <span class="n">col_time</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-    <span class="c1"># 7. (Langkah menghapus &#39;time&#39; tidak diperlukan lagi)</span>
+<span class="c1"># 3. Kelompokkan berdasarkan HOST_ID dan Jumlahkan Frekuensi Halaman</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mengelompokkan data berdasarkan &#39;</span><span class="si">{</span><span class="n">host_col</span><span class="si">}</span><span class="s2">&#39; dan menjumlahkan frekuensi halaman...&quot;</span><span class="p">)</span>
 
-    <span class="c1"># --- DIUBAH DI SINI ---</span>
+<span class="c1"># Identifikasi semua kolom halaman (yang dimulai dengan &#39;PAGE_&#39;)</span>
+<span class="n">page_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_matrix</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">col</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;PAGE_&#39;</span><span class="p">)]</span>
 
-    <span class="c1"># 8. Tentukan kolom yang ingin disimpan (sesuai permintaan Anda)</span>
-    <span class="c1">#    Kita tambahkan &#39;SESSION&#39; ke daftar ini</span>
-    <span class="n">columns_to_keep</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;SESSION&#39;</span><span class="p">,</span> <span class="s1">&#39;host&#39;</span><span class="p">,</span> <span class="s1">&#39;datetime_readable&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">]</span>
+<span class="c1"># Lakukan pengelompokan dan penjumlahan (sum)</span>
+<span class="n">df_user_frequency</span> <span class="o">=</span> <span class="n">df_matrix</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">host_col</span><span class="p">)[</span><span class="n">page_cols</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 
-    <span class="c1"># Buat DataFrame baru HANYA dengan 4 kolom tersebut</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Memfilter data untuk HANYA menyimpan kolom: </span><span class="si">{</span><span class="n">columns_to_keep</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
-    <span class="n">df_final_output</span> <span class="o">=</span> <span class="n">df_sorted</span><span class="p">[</span><span class="n">columns_to_keep</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1"># 4. Simpan Matriks Frekuensi Pengguna (Aggregasi)</span>
+<span class="n">output_filename</span> <span class="o">=</span> <span class="s2">&quot;user_page_frequency_matrix_NASA_aggregated.csv&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Menyimpan Matriks Frekuensi Pengguna (Aggregasi) ke </span><span class="si">{</span><span class="n">output_filename</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+<span class="n">df_user_frequency</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_filename</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 
-    <span class="c1"># 9. Simpan DataFrame yang SUDAH DIFILTER</span>
-    <span class="n">output_filename</span> <span class="o">=</span> <span class="s2">&quot;session_host_time_url_NASA.csv&quot;</span> <span class="c1"># Nama file baru</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Berhasil! Matriks Frekuensi Sesi telah digabungkan menjadi Matriks Frekuensi Pengguna.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File hasil disimpan sebagai: </span><span class="si">{</span><span class="n">output_filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Menyimpan data ke </span><span class="si">{</span><span class="n">output_filename</span><span class="si">}</span><span class="s2"> dengan pemisah KOMA (&#39;,&#39;)...&quot;</span><span class="p">)</span>
-    <span class="n">df_final_output</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_filename</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
-
-    <span class="c1"># -------------------------</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Berhasil! File baru disimpan sebagai: </span><span class="si">{</span><span class="n">output_filename</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Pratinjau data baru (sekarang dengan 4 kolom):&quot;</span><span class="p">)</span>
-
-    <span class="c1"># Tampilkan pratinjau dari data final</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">df_final_output</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error: Kolom &#39;</span><span class="si">{</span><span class="n">col_ip</span><span class="si">}</span><span class="s2">&#39; atau &#39;</span><span class="si">{</span><span class="n">col_time</span><span class="si">}</span><span class="s2">&#39; tidak ditemukan di </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Pratinjau Matriks Frekuensi Pengguna (Setiap baris adalah total kunjungan per Host/IP):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_user_frequency</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Memuat data dari time_converted_NASA.csv...
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipython-input-3569514730.py:14: DtypeWarning: Columns (0) have mixed types. Specify dtype option on import or set low_memory=False.
-  df = pd.read_csv(file_name, sep=&#39;;&#39;, parse_dates=[col_time])
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Membuat kolom &#39;SESSION&#39; berdasarkan &#39;host&#39; unik...
-Mengurutkan data berdasarkan &#39;SESSION&#39; dan &#39;datetime_readable&#39;...
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Memuat Matriks Frekuensi dari session_page_frequency_matrix_NASA_Benar.csv...
+Error: File session_page_frequency_matrix_NASA_Benar.csv tidak ditemukan. Pastikan file sudah ada dan nama file sudah benar.
+Mengekstrak ID Pengguna/Host dari kolom &#39;SESSION_ID&#39;...
+Mengelompokkan data berdasarkan &#39;HOST_ID&#39; dan menjumlahkan frekuensi halaman...
+Menyimpan Matriks Frekuensi Pengguna (Aggregasi) ke user_page_frequency_matrix_NASA_aggregated.csv...
 
-Memfilter data untuk HANYA menyimpan kolom: [&#39;SESSION&#39;, &#39;host&#39;, &#39;datetime_readable&#39;, &#39;url&#39;]...
-Menyimpan data ke session_host_time_url_NASA.csv dengan pemisah KOMA (&#39;,&#39;)...
+Berhasil! Matriks Frekuensi Sesi telah digabungkan menjadi Matriks Frekuensi Pengguna.
+File hasil disimpan sebagai: user_page_frequency_matrix_NASA_aggregated.csv
 
-Berhasil! File baru disimpan sebagai: session_host_time_url_NASA.csv.
+Pratinjau Matriks Frekuensi Pengguna (Setiap baris adalah total kunjungan per Host/IP):
+                           HOST_ID  PAGE_1  PAGE_2  PAGE_3  PAGE_4  PAGE_5  \
+0                      ***.novo.dk       0       0       0       0       0   
+1                   007.thegap.com       0       0       0       0       0   
+2  01-dynamic-c.wokingham.luna.net       0       0       0       0       0   
+3  02-dynamic-c.wokingham.luna.net       0       0       0       0       0   
+4  03-dynamic-c.wokingham.luna.net       0       0       0       0       0   
 
-Pratinjau data baru (sekarang dengan 4 kolom):
-   SESSION         host   datetime_readable  \
-0        1  ***.novo.dk 1995-07-11 12:17:09   
-1        1  ***.novo.dk 1995-07-11 12:17:48   
-2        1  ***.novo.dk 1995-07-11 12:23:01   
-3        1  ***.novo.dk 1995-08-09 07:02:48   
-4        1  ***.novo.dk 1995-08-09 07:05:38   
+   PAGE_6  PAGE_7  PAGE_8  PAGE_9  ...  PAGE_103  PAGE_104  PAGE_105  \
+0       0       0       0       0  ...         0         0         0   
+1       0       0       0       0  ...         0         0         0   
+2       0       0       0       0  ...         0         0         0   
+3       0       0       0       0  ...         0         0         0   
+4       0       0       0       0  ...         0         0         0   
 
-                                            url  
-0                                     /ksc.html  
-1               /shuttle/missions/missions.html  
-2     /shuttle/resources/orbiters/columbia.html  
-3  /shuttle/missions/sts-69/mission-sts-69.html  
-4               /shuttle/countdown/liftoff.html  
+   PAGE_106  PAGE_107  PAGE_108  PAGE_109  PAGE_110  PAGE_111  PAGE_112  
+0         0         0         0         0         0         0         0  
+1         0         0         0         0         0         0         0  
+2         0         0         0         0         0         0         0  
+3         0         0         0         0         0         0         0  
+4         0         0         0         0         0         0         0  
+
+[5 rows x 113 columns]
 </pre></div>
 </div>
 </div>
