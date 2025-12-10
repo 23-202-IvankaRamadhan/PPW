@@ -1,0 +1,1519 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Word Graph &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'word_graph';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Code Komunitas Facebook" href="Data_Komunitas_FB.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Pengantar Web Mining
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Crawling.html">Crawling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Crawling_PTA.html">Crawling PTA &amp; Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Preprocessing_Crawling_PTA.html">Preprocessing Crawling PTA &amp; Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TF_IDF_Word_Embedding.html">TF-IDF &amp; Word Embedding</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="LDA_with_Gensim.html">LDA With Gensim</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="UTS_PPW.html">UTS PPW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PageRank.html">PageRank</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Code_Web_Usage_Mining.html">Web Usage Mining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Analisa_Clustering.html">Analisa Clustering Data Terakhir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data_Komunitas_FB.html">Code Komunitas Facebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Word Graph</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fword_graph.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/word_graph.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Word Graph</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installasi-pymupdf">Installasi pymupdf</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghubungkan-drive">Menghubungkan Drive</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membaca-paper-dan-membuat-file-txt">Membaca Paper dan Membuat file txt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installasi-nltk">Installasi nltk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installasi-library-nltk">Installasi Library nltk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membaca-file-txt">Membaca file txt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membaca-kalimat">Membaca kalimat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-sekumpulan-data-list-menjadi-bentuk-tabel-dataframe">Mengubah sekumpulan data (list) menjadi bentuk tabel (DataFrame)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-data-di-atas-menjadi-csv">Import data di atas menjadi csv</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#co-occurrence-matrix-matriks-kemunculan-bersama">Co-occurrence Matrix (Matriks Kemunculan Bersama)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installasi-networkx">Installasi networkx</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-data-matriks-tabel-angka-menjadi-struktur-graf-jaringan-network-graph">mengubah data matriks (tabel angka) menjadi struktur Graf Jaringan (Network Graph)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisai-word-graph-node-dengan-label-angka">Visualisai Word Graph Node dengan Label angka</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisai-word-graph-node-dengan-label-kata">Visualisai Word Graph Node dengan Label Kata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-label-titik-node-pada-graf-yang-tadinya-berupa-angka-indeks-0-1-2-kembali-menjadi-kata-aslinya-teks">mengubah label titik (node) pada graf yang tadinya berupa angka indeks (0, 1, 2…) kembali menjadi kata aslinya (teks)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-tingkat-kepentingan-pagerank-setiap-kata-dan-menampilkan-10-kata-kunci-keywords-paling-dominan">menghitung tingkat kepentingan (PageRank) setiap kata dan menampilkan 10 kata kunci (keywords) paling dominan</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="word-graph">
+<h1>Word Graph<a class="headerlink" href="#word-graph" title="Link to this heading">#</a></h1>
+<section id="installasi-pymupdf">
+<h2>Installasi pymupdf<a class="headerlink" href="#installasi-pymupdf" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pymupdf</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pymupdf
+  Downloading pymupdf-1.26.6-cp310-abi3-manylinux_2_28_x86_64.whl.metadata (3.4 kB)
+Downloading pymupdf-1.26.6-cp310-abi3-manylinux_2_28_x86_64.whl (24.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">24.1/24.1 MB</span> <span class=" -Color -Color-Red">48.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: pymupdf
+Successfully installed pymupdf-1.26.6
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menghubungkan-drive">
+<h2>Menghubungkan Drive<a class="headerlink" href="#menghubungkan-drive" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mounted at /content/drive
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membaca-paper-dan-membuat-file-txt">
+<h2>Membaca Paper dan Membuat file txt<a class="headerlink" href="#membaca-paper-dan-membuat-file-txt" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pymupdf</span>
+
+<span class="n">doc</span> <span class="o">=</span> <span class="n">pymupdf</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/76_A+Stratified+Modeling-Machine+Learning+Approach+to+Improve+the+Accuracy+of+Non-Invasive+Bloo.pdf&quot;</span><span class="p">)</span> <span class="c1"># open a document</span>
+<span class="n">out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="c1"># create a text output</span>
+<span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span> <span class="c1"># iterate the document pages</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="c1"># get plain text (is in UTF-8)</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="c1"># write text of page</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">bytes</span><span class="p">((</span><span class="mi">12</span><span class="p">,)))</span> <span class="c1"># write page delimiter (form feed 0x0C)</span>
+<span class="n">out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="installasi-nltk">
+<h2>Installasi nltk<a class="headerlink" href="#installasi-nltk" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">capture</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">nltk</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="installasi-library-nltk">
+<h2>Installasi Library nltk<a class="headerlink" href="#installasi-library-nltk" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>  <span class="c1"># hanya perlu sekali</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt_tab&#39;</span><span class="p">)</span>  <span class="c1"># opsional, untuk versi terbaru NLTK (≥3.8.2)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+[nltk_data] Downloading package punkt_tab to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt_tab.zip.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membaca-file-txt">
+<h2>Membaca file txt<a class="headerlink" href="#membaca-file-txt" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;output.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">teks</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">teks</span><span class="p">[:</span><span class="mi">200</span><span class="p">])</span>  <span class="c1"># tampilkan 200 karakter pertama</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	
+76	
+International Journal of Online and Biomedical Engineering (iJOE)	
+iJOE | Vol. 21 No. 6 (2025)
+iJOE  |  eISSN: 2626-8493  |  Vol. 21 No. 6 (2025)  | 
+JOE
+International Journal of 
+Online and Bio
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membaca-kalimat">
+<h2>Membaca kalimat<a class="headerlink" href="#membaca-kalimat" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install: pip install nltk</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+
+
+<span class="c1">#text = &quot;Ini adalah kalimat pertama. Ini kalimat kedua? Ya!&quot;</span>
+<span class="n">sentences</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">teks</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span>
+<span class="c1"># Output: [&#39;Ini adalah kalimat pertama.&#39;, &#39;Ini kalimat kedua?&#39;, &#39;Ya!&#39;]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;\t\n76\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\niJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\niJOE\u2002 |\u2002 eISSN: 2626-8493\u2002 |\u2002 Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\u2002 |\u2002\nJOE\nInternational Journal of \nOnline and Biomedical Engineering\nFitrilina, Rusydi, M.I., Kurnia, R., Windasari, N., Putra, R.Z.&#39;, &#39;(2025).&#39;, &#39;A Stratified Modeling-Machine Learning Approach to Improve the Accuracy \nof Non-Invasive Blood Glucose Estimation Using Photoplethysmography Signals.&#39;, &#39;International Journal of Online and Biomedical Engineering (iJOE), \n21(6), pp.&#39;, &#39;76–96.&#39;, &#39;https://doi.org/10.3991/ijoe.v21i06.53815\nArticle submitted 2024-12-12.&#39;, &#39;Revision uploaded 2025-01-30.&#39;, &#39;Final acceptance 2025-01-30.&#39;, &#39;© 2025 by the authors of this article.&#39;, &#39;Published under CC-BY.&#39;, &#39;Online-Journals.org\nPAPER\nA Stratified Modeling-Machine Learning Approach \nto Improve the Accuracy of Non-Invasive Blood Glucose \nEstimation Using Photoplethysmography Signals\nABSTRACT\nDiabetes is a silent killer that can only be controlled with continuous monitoring of blood \nglucose levels.&#39;, &#39;The method commonly used is invasive and has various weaknesses, but it is \nmore accurate than non-invasive methods.&#39;, &#39;This research aims to develop a method to increase \nthe accuracy of non-invasive estimation of blood glucose levels using photoplethysmography \n(PPG) signals.&#39;, &#39;The proposed method is to carry out stratified modeling-machine learning.&#39;, &#39;The tested classifiers were support vector machines (SVM), KNN, Naïve Bayes, decision tree, \nand neural network.&#39;, &#39;The prediction model used simple linear, logarithmic, second-order \npolynomial, exponential, and power regression.&#39;, &#39;Applying stratified modeling using linear \nregression in the non-diabetes stratum and logarithmic regression in the diabetes stratum \nobtained a mean absolute relative difference (MARD) value of 4.5%, root mean square error \n(RMSE) of 18.9 mg/dl, Pearson correlation 0.985 and Clarke error grid analysis (CEGA) 96% in \nregion A and 4% in region B.&#39;, &#39;The implementation of stratification reveals a marked improve-\nment in efficacy, manifested as a reduction in the MARD by 77.83%, a decrease in the RMSE by \n51.91%, an enhancement in the Pearson correlation by 0.065, and a CEGA by 100% in regions \nA and B, thereby being clinically acceptable.&#39;, &#39;Implementing a stratified modeling-machine \nlearning approach can improve the accuracy of non-invasive blood glucose level estimates.&#39;, &#39;KEYWORDS\nblood glucose non-invasively, machine learning, photoplethysmography (PPG), classification, \nregression\n1 \nINTRODUCTION\nThe International Diabetes Federation (IDF) identifies diabetes as one of the top \nten causes of adult mortality.&#39;, &#39;In 2017, approximately 424.9 million adults (aged \n20–79 years) were diagnosed with diabetes, resulting in 4 million deaths and global \nFitrilina1,2, Muhammad \nIlhamdi Rusydi1(\uf02a), \nRahmadi Kurnia1, \nNoverika Windasari3, \nRaffi Zahrandhika Putra2\n1Department of Electrical \nEngineering, Faculty \nof Engineering, Universitas \nAndalas, Padang \nCity, Indonesia\n2Department of Electrical \nEngineering, Faculty \nof Engineering, Universitas \nBengkulu, Bengkulu \nCity, Indonesia\n3Department of Forensic \nand Legal Medicine, \nFaculty of Medicine, \nUniversitas Andalas, \nPadang City, Indonesia\nrusydi@eng.unand.ac.id\nhttps://doi.org/10.3991/ijoe.v21i06.53815\n\x0ciJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\n77\nA Stratified Modeling-Machine Learning Approach to Improve the Accuracy of Non-Invasive Blood Glucose Estimation Using Photoplethysmography Signals\nhealthcare expenditures of USD 727 billion [1].&#39;, &#39;By 2019, these numbers increased \nto 463 million cases, 4.2 million deaths, and USD 760.3 billion in expenditures.&#39;, &#39;The global prevalence rose from 8.8% in 2017 to 9.3% in 2019, with projections indi-\ncating a continued upward trend.&#39;, &#39;In 2019, Indonesia ranked seventh globally and \nwas the only Southeast Asian country among the top ten nations with the highest \nnumber of diabetes cases in the 20–79 age group [1], [2], and [3].&#39;, &#39;Diabetes is a chronic disease [4], a metabolic disorder [5], [6], characterized by \nfluctuations in blood glucose levels [6], and is a lifelong disease [7].&#39;, &#39;Diabetes is char-\nacterized by impaired insulin production and utilization, leading to elevated blood \nglucose levels and affecting digestion [8].&#39;, &#39;Uncontrolled hyperglycemia, with glucose \nlevels above the euglycemic range [9], can cause severe damage to the heart, blood \nvessels, nerves, eyes, and kidneys [5], [6].&#39;, &#39;While hypoglycemia, in which glucose \nlevels fall below the euglycemic range [9], can cause seizures, coma, arrhythmias, \nand cardiac failure [6].&#39;, &#39;Effective diabetes management relies on continuous blood \nglucose monitoring.&#39;, &#39;Current methods are invasive or minimally invasive, requiring \npunctured blood samples, causing pain, discomfort, and high cost [10], [11].&#39;, &#39;This \nmethod uses a disposable test strip and places a drop of blood sample for analysis.&#39;, &#39;Blood glucose monitoring for patients with glycemic disorders can consume up to \n25% of their healthcare costs, primarily due to the high expense of glucose test strips, \nwhich dominate 85% of the global biosensor market [12].&#39;, &#39;Therefore, non-invasive \nmethods are crucial to addressing the limitations of invasive methods [13].&#39;, &#39;There are many studies, but no reliable and accurate method has been estab-\nlished [10], [11], [14], [15], and [16] which requires further improvement [10].&#39;, &#39;Non-\ninvasive blood glucose screening is categorized into optical and non-optical methods.&#39;, &#39;The optical properties of glucose are specific and show a superior correlation.&#39;, &#39;Thus, \noptical methods provide better results than non-optical methods [17].&#39;, &#39;Glucose con-\ncentration affects the scattering coefficient, thus allowing estimation through light \nintensity changes transmitted or reflected from glucose-containing tissues [6], [13].&#39;, &#39;A typical optical method used for measuring blood glucose concentration is pho-\ntoplethysmography (PPG) [3], [17], and [18].&#39;, &#39;PPG is a noninvasive methodology that \nmeasures blood volume by examining the intensity of light transmitted or reflected \nfrom human biological tissues [19].&#39;, &#39;Previous research has shown that this technique \ncan evaluate important physiological metrics such as blood pressure, heart rate, and \nrespiration while identifying diabetes [19].&#39;, &#39;Research into methods for non-invasive estimation of glucose levels has been exten-\nsively advanced.&#39;, &#39;The most rudimentary approach entails mathematical modeling, as \nevidenced in studies [4] and [10].&#39;, &#39;Research [20], [21] employs statistical methodologies.&#39;, &#39;The most widely utilized form of simple regression is linear regression [4], [6], [13], [21], \n[22], [23], and [24], alongside polynomial regression [7], [18], and [22].&#39;, &#39;Conventional \nmethods are widely utilized due to their inherent simplicity; nevertheless, the accu-\nracy and robustness of these methods require further refinement.&#39;, &#39;The machine learn-\ning techniques that are commonly employed include partial least squares (PLS) [20], \n[25]; random forest (RF) [26], [27], and [28]; ensembled boosted trees-SVR [29]; the \nensemble regression trees model [30]; and the ensemble bagging tree [3], in addition \nto ANN-based frameworks [12], [31]; support vector machines (SVM) [32]; FGSVR [33]; \nexponential Gaussian process machine learning regression [34]; Kernel-based regres-\nsion methods [35]; and multiple linear regression analysis [36].&#39;, &#39;Applying non-linear \nmachine learning methods yields superior estimation outcomes compared to linear \nmachine learning approaches [5].&#39;, &#39;This research focused on developing prediction \nmodels for blood glucose estimation using data from diabetic and non-diabetic sub-\njects.&#39;, &#39;The training process combines these datasets into a single model, introducing \nsignificant heterogeneity due to variations in PPG signal patterns between diabetic \n\x0c\t\n78\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\niJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\nFitrilina et al.&#39;, &#39;and non-diabetic groups [3] and individual differences within each group [3], [37].&#39;, &#39;Therefore, combining diabetic data and non-diabetic data in one group of training \ndata sets will increase the heterogeneity of the data set.&#39;, &#39;Heterogeneity refers to the \nvariability present within data sets, requiring thorough examination to mitigate \npotential erroneous outcomes and conclusions [37], [38], and [39].&#39;, &#39;Data heterogeneity is a challenge in prediction or estimation models because data \nis very diverse, it is difficult to capture consistent patterns, and it is more complex [37], \n[40] because more factors must be considered, thus increasing estimation bias and \nreducing machine learning accuracy [37].&#39;, &#39;This study addresses these issues by pro-\nposing a noninvasive blood glucose estimation approach using homogeneous data \ngroups.&#39;, &#39;By aligning the model with the specific characteristics of the data, this approach \naims to reduce variability, enhance model precision, and simplify the decision- \nmaking process.&#39;, &#39;This study’s contribution lies in the implementation of stratified \nmodeling to estimate blood glucose levels noninvasively through the utilization \nof PPG signals in conjunction with machine learning methods.&#39;, &#39;This study aims to \nenhance the accuracy of the noninvasive measurement of blood glucose concen-\ntrations by implementing stratified modeling techniques.&#39;, &#39;This study will evaluate \nsystem accuracy with and without stratified modeling methods.&#39;, &#39;2 \nMATERIALS AND METHODS\nThis study employs stratified modeling with machine learning to estimate blood \nglucose levels non-invasively, as shown in Figure 1.&#39;, &#39;Stratified modeling involves \ndeveloping separate models for distinct categorical features or parameter values [41].&#39;, &#39;Segmenting heterogeneous datasets into homogeneous clusters simplifies data dis-\ntribution and facilitates analysis using conventional methods [37].&#39;, &#39;Models built \nwithin these clusters better align with the data’s characteristics, reducing variabil-\nity and enhancing predictive accuracy.&#39;, &#39;The effectiveness of the stratified approach \nrelies heavily on selecting stratification features, effectively balancing the strengths \nof complex and simple models [41].&#39;, &#39;Proposed Methods\nPPG\nsignal\nTraining\nTesting\nClassiﬁcation\nEstimation\nBlood glucose level\n(mg/dl)\nData Collection\nand Acquisition\nClassiﬁcation\nSub Model 1\nSub Model 2\nSub Model N\nPredictive\nModel-1\nPredictive\nModel-2\nPredictive\nModel-N\nFig.&#39;, &#39;1.&#39;, &#39;Stratified modelling process to estimate blood glucose concentration\n\x0ciJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\n79\nA Stratified Modeling-Machine Learning Approach to Improve the Accuracy of Non-Invasive Blood Glucose Estimation Using Photoplethysmography Signals\nThis study utilized diabetes and non-diabetes as stratification parameters, \nemploying a machine learning classifier to categorize the data.&#39;, &#39;Separate predictive \nmodels were developed for each stratum.&#39;, &#39;During training, the classifier was trained \nto distinguish between diabetic and non-diabetic data while simultaneously build-\ning predictive models specific to each category.&#39;, &#39;In testing, PPG signals were classi-\nfied as diabetic or non-diabetic, and blood glucose concentrations were estimated \nusing the corresponding predictive model.&#39;, &#39;The research workflow is summarized \nin Figure 2.&#39;, &#39;Fig.&#39;, &#39;2.&#39;, &#39;Flowchart of research stages with a stratified modelling approach\n\x0c\t\n80\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\niJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\nFitrilina et al.&#39;, &#39;2.1 \nHardware design\nTwo sensor positioning modes can be employed: the transmission mode \n(see Figure 3a) and the reflectance mode (see Figure 3b).&#39;, &#39;a)\nb)\nFig.&#39;, &#39;3.&#39;, &#39;Sensor mode: a) Transmission, b) Reflectance [18]\nThis study utilized the transmission mode.&#39;, &#39;Near-infrared light-emitting diodes \n(NIR-LEDs) operating at 940 nm emit light that is absorbed and converted into \nvoltage signals by the OPT101.&#39;, &#39;The wavelength of 940 nm is selected due to its \nhigh sensitivity to glucose molecules in the bloodstream [4], [6], and [16].&#39;, &#39;The PPG \nsignals were acquired using the OPT101 sensor.&#39;, &#39;The OPT101 was chosen for its \nhigh sensitivity and ability to minimize interference from environmental light \nor scattering effects [42].&#39;, &#39;Its integrated photodiode detects light intensity, which \nis converted into a current output.&#39;, &#39;The trans-impedance amplifier (TIA) within \nthe OPT101 amplifies this current and converts it into a proportional voltage \noutput, directly correlating with blood glucose concentration [43].&#39;, &#39;No additional \npreprocessing techniques, such as filtering or noise reduction, were applied, rely-\ning instead on the sensor’s ability to minimize interference from environmental \nlight and signal artifacts.&#39;, &#39;The raw signal was directly used for further analysis \nand modelling.&#39;, &#39;The analog voltage is processed by the ESP32 to be converted to an \nADC value.&#39;, &#39;2.2 \nData collection and acquisitions\nPhotoplethysmography signals were recorded over 20 seconds at a sampling \nfrequency of 100 Hz.&#39;, &#39;The analog voltage was converted into ADC values ranging \nfrom 0 to 1023 (10-bit resolution).&#39;, &#39;The data set consists of sensor voltage outputs \n(ADC value), subject ages, and blood glucose concentrations (mg/dL) obtained from \nan invasive glucometer (Accu-Chek).&#39;, &#39;PPG signals were labeled as non-diabetes or \ndiabetic based on the 2019 National Institute for Clinical Excellence (NICE) guide-\nlines, as detailed in Table 1.&#39;, &#39;Table 1.&#39;, &#39;Blood glucose level of nice 2019 [3]\nPlasma Glucose Test\nNon-Diabetes\nPrediabetes\nDiabetes\nRandom\n&lt;200 mg/dl or \n&lt;11,1 mmol/L\nN/A\n&gt;200 mg/dl or \n&gt;11,1 mmol/L\nFasting\n&lt;100 mg/dl or \n&lt;5,5 mmol/L\n100–125 mg/dl or \n5,5–6,9 mmol/L\n&gt;126 mg/dl or  \n7 mmol/L\n\x0ciJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\n81\nA Stratified Modeling-Machine Learning Approach to Improve the Accuracy of Non-Invasive Blood Glucose Estimation Using Photoplethysmography Signals\nRandom plasma glucose assessments may be performed at any time without the \nnecessity for preparatory measures [3].&#39;, &#39;Conversely, the fasting plasma glucose eval-\nuation is conducted following a minimum fasting period of eight hours [3].&#39;, &#39;This \nresearch employed a random testing methodology.&#39;, &#39;The study analyzed 200 training \ndatasets comprising 100 non-diabetes and 100 diabetic samples and 50 testing data \nsets comprising 25 non-diabetes and 25 diabetic samples.&#39;, &#39;This study received ethical \napproval from the Ethics Committee of the Faculty of Medicine, Universitas Andalas, \nwith approval number 519/UN.16.2/KEP-FK/2024.&#39;, &#39;2.3 \nClassification\nClassification was performed to categorize PPG signals into non-diabetes or \ndiabetic strata.&#39;, &#39;The classified ADC voltage values were then converted to blood \nglucose levels (mg/dL) using the corresponding regression model.&#39;, &#39;Recently, \nmachine learning methods are widely used in the medical field for the detec-\ntion, diagnosis, and classification of diseases [44].&#39;, &#39;All models tested are shown \nin Figure 4.&#39;, &#39;Fig.&#39;, &#39;4.&#39;, &#39;Classifier tested\nThe validation process in this study employs both resubstitution and five-fold \ncross-validation techniques to evaluate model performance.&#39;, &#39;Resubstitution vali-\ndation provides an initial assessment of how well the model fits the training data, \nwhile five-fold cross-validation ensures robustness by partitioning the dataset into \nfive subsets, using one subset for testing and the remaining for training iteratively.&#39;, &#39;This approach minimizes overfitting and provides a more reliable estimate of the \nmodel’s generalization capability.&#39;, &#39;2.4 \nEstimation\nThis study employs simple regression methods: linear, second-order polynomial, \nexponential, logarithmic, and power models.&#39;, &#39;In this approach, the ADC value is the \n\x0c\t\n82\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\niJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\nFitrilina et al.&#39;, &#39;independent variable (X), and the invasive blood glucose measurement from the \nACCU-CHECK glucometer is the dependent variable (Y).&#39;, &#39;The efficacy of these estima-\ntion models was evaluated based on the following criteria:\n1.&#39;, &#39;Mean absolute relative difference (MARD): Mean absolute relative difference is a \nprevalent criterion utilized for assessing glucose monitoring methods [28], [31].&#39;, &#39;It quantifies the relative difference between a non-invasive device’s predicted \nvalues and an invasive device’s reference values [28], [31].&#39;, &#39;MARD is calculated \nusing equation (1) [33].&#39;, &#39;MARD\nn\nX\nY\nY\ni\nn\ni\ni\ni\n\x1f\n\x1e\n\x1f\n1\n100\n1\x1d\n\x1c\n(\n)\n\x1b \x1b\n\x1b% \t\n(1)\n2.&#39;, &#39;Root mean square error (RMSE): Root mean square error measures the devia-\ntion between predicted and actual values, reflecting the standard deviation of \nresiduals [28], [31].&#39;, &#39;It is calculated using equation (2) [28].&#39;, &#39;RMSE\nX\nY\nn\ni\nn\ni\ni\n\x1f\n\x1e\n\x1f1\n2\n\x1d\n(\n)\n\t\n(2)\n \n\u2003x denotes the predicted value non-invasively, y represents the reference value \ninvasively, and n indicates the number of samples.&#39;, &#39;3.&#39;, &#39;Pearson correlation (R): Correlation coefficient (R) describes the strength of the \nrelationship [45].&#39;, &#39;This study uses Pearson correlation to analyze the relationship \nbetween the estimated blood glucose values from the regression model and the \nreference values measured by an invasive glucometer.&#39;, &#39;4.&#39;, &#39;Clark error grid analysis (CEG): Clarke error grid analysis (CEGA) is a standard \nmethod for assessing the clinical accuracy of self-monitoring of blood glucose \n(SMBG) devices [46].&#39;, &#39;Region A is clinically accurate decisions (deviation of ±20% \nfrom the actual values) [47]; Region B is clinically acceptable and uncritical \ndecisions; Region C is overcorrections that could lead to an adverse outcome; \nRegion D is dangerous failure to detect and treat; and Region E is erroneous \ntreatment [48].&#39;, &#39;3 \nRESULTS AND DISCUSSION\n3.1 \nData acquisition and analysis\nThe dataset in this study, while demonstrating the methodology’s efficacy \nwith participants from Bengkulu City, Indonesia (93 male and 107 female, aged \n18–71 years), does not include key demographic variables such as ethnicity, body \nmass, and pre-existing conditions.&#39;, &#39;Although this limits generalizability to diverse \npopulations, the primary objective was to evaluate the effectiveness of a stratified \nmodelling approach for improving non-invasive glucose estimation, which was \nsuccessfully achieved within this context.&#39;, &#39;Future research should build on these \nfindings by incorporating more diverse datasets with broader demographic and \nphysiological factors to enhance the model’s robustness and ensure clinical util-\nity across varied populations.&#39;, &#39;Figure 5 shows the data set distribution used in \n\x0ciJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\n83\nA Stratified Modeling-Machine Learning Approach to Improve the Accuracy of Non-Invasive Blood Glucose Estimation Using Photoplethysmography Signals\nthe training phase.&#39;, &#39;The ADC value data and the age of the subjects can be seen in \nFigure 5a.&#39;, &#39;The distribution of the output voltage value of the OPT101 sensor (in ADC \nunits) corresponding to the blood glucose level measured by the Accu-Chek device \nis illustrated in Figure 5b.&#39;, &#39;a) Two features\nb) One feature\nFig.&#39;, &#39;5.&#39;, &#39;Distribution of ADC value in training data\nFigure 5b shows an inverse correlation between sensor voltage and blood \nglucose concentration, where an increase in glucose levels leads to a decrease \nin sensor voltage.&#39;, &#39;This finding aligns with previous studies [49], suggesting that \nhigher glucose concentrations raise the attenuation coefficient, causing greater \nlight absorption and less scattering in the blood [50].&#39;, &#39;Consequently, less light is \ncaptured by the sensor, reducing the PPG signal amplitude and sensor voltage \n[13] [51].&#39;, &#39;Figure 5b shows distinct distribution patterns of ADC values and blood \nglucose levels between non-diabetes and diabetic individuals.&#39;, &#39;The non-diabetes \ncategory exhibits a more linear distribution compared to the diabetic category.&#39;, &#39;As \na result, using a single predictive model, such as a linear regression equation, for \nall subjects is likely to introduce significant estimation bias, negatively affecting \nmodel accuracy [37].&#39;, &#39;To reduce this bias and improve accuracy, we propose devel-\noping separate predictive models for each category, non-diabetes and diabetic, \nthrough stratified modeling.&#39;, &#39;This approach classifies subjects based on their PPG \nsignals using various machine learning methods, followed by applying regression \ntechniques for each group.&#39;, &#39;3.2 \nClassification results\nThe proposed method begins with a classification phase that distinguishes PPG \nsignals into diabetic and non-diabetic categories.&#39;, &#39;This step is crucial, as grouping \nthe PPG signals enables more accurate subsequent estimations using an appro-\npriate predictive model, reducing bias and improving precision.&#39;, &#39;The testing \ndataset includes 50 samples (25 diabetic and 25 non-diabetic), with two classifi-\ncation schemes: one using both ADC value and age and the other using only the \nADC value.&#39;, &#39;This design evaluates whether age affects the classification or if the \nADC value is the primary factor.&#39;, &#39;Classification accuracy results are summarized \nin Table 2.&#39;, &#39;84\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\niJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\nFitrilina et al.&#39;, &#39;Table 2.&#39;, &#39;Percentage accuracy of the classification process\nMethod\nUsing ADC Voltage and Age Features\nUsing ADC Voltage \nFeatures and 5-Fold \nCross-Validation\nResubstitution \nValidation\n5-Fold\nCross Validation\nTraining\nTesting\nTraining\nTesting\nTraining\nTesting\nSVM:\nLinear\n98.5\n100\n97.5\n100\n95\n98\nQuadratic\n99.5\n100\n99\n100\n97.5\n100\nCubic\n99.5\n100\n98.5\n100\n97.5\n100\nFine Gaussian\n99.5\n100\n97.5\n100\n96.5\n100\nMedium Gaussian\n99\n100\n98.5\n100\n95\n100\nCoarse Gaussian\n97\n100\n97\n100\n95\n100\nKNN:\nFine\n100\n100\n97.5\n100\n99.5\n100\nMedium\n98.5\n100\n97.5\n100\n97.5\n100\nCoarse\n97\n100\n97\n100\n93.5\n94\nCosine\n98.5\n100\n97\n100\n93.5\n94\nCubic\n98.5\n100\n97.5\n100\n97.5\n100\nWeighted\n100\n100\n98\n100\n99.5\n100\nNaïve Bayes:\nGaussian\n97.5\n100\n97\n100\n95\n100\nKernel\n99\n100\n99\n100\n95\n98\nDecision Trees:\nFine\n99.5\n100\n98.5\n100\n98\n100\nMedium\n99.5\n100\n98.5\n100\n98\n100\nCoarse\n99.5\n100\n98.5\n100\n98.5\n100\nNeural Network:\nNarrow\n100\n100\n99.5\n100\n97\n100\nMedium\n100\n100\n99.5\n100\n97\n100\nWide\n100\n100\n99.5\n100\n99.5\n100\nBi-layered\n100\n100\n99\n100\n99\n100\nTri-layered\n100\n100\n99.5\n100\n98\n100\nThe classification results demonstrate that wide neural networks consistently out-\nperformed other methods, achieving 100% accuracy in testing across all validation \nsetups, highlighting its robustness.&#39;, &#39;Models incorporating ADC voltage and age fea-\ntures showed significantly better performance than those using ADC voltage alone, \nunderscoring the importance of combining signal-based and demographic data.&#39;, &#39;Weighted KNN and quadratic SVM also delivered high accuracy, with performance \n\x0ciJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\n85\nA Stratified Modeling-Machine Learning Approach to Improve the Accuracy of Non-Invasive Blood Glucose Estimation Using Photoplethysmography Signals\nranging from 97.5% to 100%, while fine and medium decision trees proved reliable, \nachieving accuracy between 98% and 99.5%.&#39;, &#39;Kernel Naïve Bayes showed strong \nresults with 99% accuracy, outperforming its Gaussian variant.&#39;, &#39;However, models \nusing only ADC voltage showed limitations, particularly in KNN and SVM variants, \nreflecting the value of richer feature sets.&#39;, &#39;These findings establish wide neural \nnetworks as the most robust approach, with feature selection playing a critical role \nin optimizing classification accuracy.&#39;, &#39;In this research, the classification process focuses on categorizing ADC values \nfrom PPG signals into diabetic or non-diabetic strata based on the 2019 NICE guide-\nlines rather than diagnosing individuals as diabetic or non-diabetic.&#39;, &#39;In contrast, \nprevious studies on diabetes detection are summarized in Table 3.&#39;, &#39;Table 3.&#39;, &#39;Related work\nAuthors\nMethod\nFeature\nAccuracy\nReddy et al.&#39;, &#39;[52]\nSVM\nHRV\n82%\nNirala et al.&#39;, &#39;[53]\nSVM\nSignal and derivatives + eigen value\n97.87%\nHettiarachchi et al.&#39;, &#39;[54]\nLDA\nSignal feature + Physio data\n83%\nQawqzeh et al.&#39;, &#39;[55]\nLogistic Regression\nSignal feature + Physio data\n92.30%\nPrabha et al.&#39;, &#39;[56]\nSVM\nMFCC + Physio data\n92.28%\nChu et al.&#39;, &#39;[57]\nLogistic Regression\nHRV + Physio data\n90%\nSusana et al.&#39;, &#39;[3]\nEnsemble Bagging Trees\n2100 sample points\n98%\nTable 3 highlights previous studies that aimed to detect diabetes using various \nfeatures of PPG signals, reporting high accuracies ranging from 82% to 98%.&#39;, &#39;This \nstudy focuses on classifying the average voltage value of the PPG signal into diabetic \nand non-diabetic groups, a feature not explored in previous studies listed in Table 3.&#39;, &#39;The average voltage of the PPG signal correlates with optical light intensity, which \nreflects glucose concentration in the blood.&#39;, &#39;While the current approach demon-\nstrates promising potential, exploring additional features in future research could \nfurther enhance classification performance and support direct diabetes detection.&#39;, &#39;Diabetes mellitus is a chronic condition characterized by excessive glucose accu-\nmulation in the bloodstream [58].&#39;, &#39;A key complication of diabetes is autonomic ner-\nvous system (ANS) dysfunction, which significantly affects heart rate variability \n(HRV).&#39;, &#39;Disruptions in glucose metabolism reduce parasympathetic and sympa-\nthetic activity, measurable through PPG morphology and HRV analysis [4].&#39;, &#39;In type 2 \ndiabetes, arterial stiffness is a significant characteristic, impacting the differentia-\ntion between diabetic and non-diabetes conditions [58].&#39;, &#39;Factors such as arterial wall \nrigidity, viscosity, and cardiac depolarization affect the PPG waveform, suggesting \ndiabetes may be detected through PPG signal analysis [59].&#39;, &#39;3.3 \nEstimation results\nLinear regression for combined dataset.&#39;, &#39;Figure 6 displays a linear regres-\nsion graph illustrating the relationship between ADC values and instant blood glu-\ncose levels based on the analysis of the combined data (200 samples).&#39;, &#39;The resulting \nregression equation is Y = -0,5947X + 341,36 with a determination coefficient of \n\x0c\t\n86\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\niJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\nFitrilina et al.&#39;, &#39;0.8348, which indicates a strong relationship between the ADC value and invasive \nblood glucose level.&#39;, &#39;y = –0,5947x + 341,36\nR² = 0,8348\n0\n50\n100\n150\n200\n250\n300\n350\n400\n450\n500\n0\n100\n200\n300\n400\n500\n600\n700\nInvasive Blood Glucose Level mg/dl\nADC Value\nFig.&#39;, &#39;6.&#39;, &#39;Linear regression curve without stratification\nThe correlation coefficient between ADC values and glucose concentration is \n0.91, indicating a very high correlation [42].&#39;, &#39;The coefficient of determination (R2) \nreveals that the ADC value explains 83.48% of the variance in blood glucose levels.&#39;, &#39;This regression model predicted non-invasive blood glucose levels on a training \ndataset of 200 samples and a testing dataset of 50 samples.&#39;, &#39;The model’s perfor-\nmance, evaluated using MARD, RMSE, and Pearson correlation, is summarized \nin Table 4.&#39;, &#39;Table 4.&#39;, &#39;Estimation performance without stratification\nGroup\nRegression\nMARD (%)\nRMSE (mg/dl)\nPearson Correlation\nDiabetes\nSimple linear regression:\ny = -0.5947x + 341.36\nR2 = 0.8348\n9.7\n40.1\n0.88\nNon diabetes\n34.3\n46.2\n0.98\nOverall Data\n20.3\n39.3\n0.92\nLinear regression for stratified modeling.&#39;, &#39;The selection of diabetic and \nnon-diabetic as stratification parameters is based on the distinct physiological \nand PPG signal differences between these groups.&#39;, &#39;Diabetes alters arterial stiff-\nness, blood viscosity, and tissue reflectance, resulting in significant signal vari-\nability.&#39;, &#39;Combining these heterogeneous datasets into a single model increases \nestimation bias and reduces predictive accuracy.&#39;, &#39;Stratification addresses this by \ncreating homogeneous subsets, improving model alignment with group-specific \ncharacteristics, and enhancing accuracy.&#39;, &#39;Linear regression analysis was per-\nformed separately for the diabetic and non-diabetic strata.&#39;, &#39;Figure 7a illustrates \nthe linear relationship for the diabetic stratum, while Figure 7b represents the \nnon-diabetic stratum.&#39;, &#39;iJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\n87\nA Stratified Modeling-Machine Learning Approach to Improve the Accuracy of Non-Invasive Blood Glucose Estimation Using Photoplethysmography Signals\na) Diabetes stratum\nb) Non-diabetes stratum\ny = –0.9693x + 381.66\nR² = 0.7829\n0\n100\n200\n300\n400\n500\n0\n100\n200\n300\nInvasive blood\nglucose (Mg/dl)\nADC value  \ny = –0.1539x + 165.74\nR² = 0.9708\n0\n50\n100\n150\n200\n0\n200\n400\n600\n800\nInvasive blood\nglucose mg/dl\nADC value\nFig.&#39;, &#39;7.&#39;, &#39;Linear regression curve with stratification\nThe linear regression model shows a correlation coefficient (R) of 0.88 for the dia-\nbetes stratum and 0.98 for the non-diabetes stratum.&#39;, &#39;The diabetes stratum exhibits \na high correlation [45], with the ADC value explaining 78.29% of the variability in \ninvasive blood glucose levels, leaving 21.71% due to other factors [45].&#39;, &#39;In contrast, \nthe non-diabetes stratum demonstrates a very high correlation [45], with 97.08% of \nblood glucose variability explained by the ADC value and 2.92% due to other factors.&#39;, &#39;Unexplained variability or other factors that influence the results can arise from \nphysiological factors of diabetic and normal subjects [3] (skin thickness variation, \nskin color variation, muscle thickness variation and tissue reflectance, heart rate or \ncardiac cycle phase, blood pressure, blood volume, aging [59], and blood circulation \n[60]), technical factors (such as sensor quality, sensor noise, and ADC resolution), or \nenvironmental factors (such as temperature and humidity, motion artifacts).&#39;, &#39;These findings demonstrate a strong linear relationship between ADC values and \nblood glucose levels, establishing ADC as a reliable predictor.&#39;, &#39;The lower coefficient \nof determination in the diabetes stratum indicates that factors beyond PPG signal \nvoltage significantly influence glucose levels in diabetic individuals.&#39;, &#39;Stratifying \nthe prediction models for non-diabetes and diabetes groups improves accuracy, \nwith linear regression proving effective for the non-diabetes stratum.&#39;, &#39;However, \nthe diabetes stratum requires further model refinement.&#39;, &#39;To address this, the study \nevaluates regression models—linear, logarithmic, polynomial, exponential, and \npower—within each stratum, assessing their performance using MARD, RMSE, and \nPearson correlation, as summarized in Table 5.&#39;, &#39;Table 5.&#39;, &#39;Estimation performance with stratification\nStrata\nRegression\nMARD (%)\nRMSE (mg/dl)\nPearson Corr\nDiabetes\nLinear:\ny = -0.9693x + 381.66\nR2 = 0.7829\n8.3\n31.6\n0.88\nLogarithmic:\ny = -52.51ln(x) + 503.96\nR2 = 0.8474\n7.5\n26.5\n0.92\nA Second – order – Polynomial:\ny = 0.0052x2 - 1.8851x + 399.59\nR2 = 0.8259\n7.4\n27.9\n0.91\nExponential:\ny = 383.89e - 0.003x\nR2 = 0.8052\n8.7\n30.9\n0.89\nPower:\ny = 566.86x - 0.171\nR2 = 0.8359\n8\n28.0\n0.91\n(Continued)\n\x0c\t\n88\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\niJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\nFitrilina et al.&#39;, &#39;Strata\nRegression\nMARD (%)\nRMSE (mg/dl)\nPearson Corr\nNon-diabetes\nLinear:\ny = -0.1522x + 164.34\nR2 = 0.9727\n1.4\n3.13\n0.98\nLogarithmic:\ny = -51.93ln(x) + 413.48\nR2 = 0.9723\n1.6\n2.9\n0.98\nA Second – order – Polynomial:\ny = 0.0001x2 - 0.2355x + 179.26\nR2 = 0.9764\n2.3\n3.39\n0.98\nExponential:\ny = 180.81e - 0.001x\nR2 = 0.9828\n16.6\n17.5\n0.985\nPower:\ny = 1677x - 0.468\nR2 = 0.9619\n0.022\n3.45\n0.977\nOverall data: Non-diabetes strata uses linear \nand diabetes strata uses logarithmic regression\n4.5\n18.9\n0.985\nThe regression analysis demonstrates the effectiveness of stratified modelling \nin improving glucose estimation accuracy by tailoring regression models to the \nunique characteristics of diabetic and non-diabetic groups.&#39;, &#39;For the diabetes stra-\ntum, logarithmic regression outperformed other models, achieving an MARD of \n7.5%, an RMSE of 26.5 mg/dL, and a Pearson correlation of 0.92, compared to \nlinear regression’s MARD of 8.3%, RMSE of 31.6 mg/dL, and Pearson correlation \nof 0.88.&#39;, &#39;These results reflect the ability of logarithmic regression to accurately \ncapture the non-linear relationship between PPG signal voltage and glucose \nlevels caused by physiological complexities in diabetic individuals.&#39;, &#39;In contrast, \nthe non-diabetes stratum exhibited a strong linear relationship, where linear \nregression achieved the best performance with an MARD of 1.4%, an RMSE of \n3.13 mg/dL, and a Pearson correlation of 0.98.&#39;, &#39;Although the power regression \nmodel in the non-diabetes group achieved a lower MARD (0.022%), its higher \nRMSE (3.45 mg/dL) suggests that linear regression offers better practicality and \nconsistency for this population.&#39;, &#39;Logarithmic regression is particularly effective for the diabetes category because \nit accounts for the non-linear trends in PPG signal voltage caused by altered physio-\nlogical factors such as arterial stiffness, blood viscosity, and tissue reflectance, which \nare significantly affected in diabetic individuals.&#39;, &#39;As glucose levels increase, these fac-\ntors diminish variations in PPG signal amplitude, creating a non-linear pattern that \nlinear regression, assuming constant change, cannot adequately model.&#39;, &#39;Logarithmic \nregression aligns more closely with the exponential-like variations in PPG signals, \nmaking it better suited for capturing the intricate dynamics of glucose metabolism \nand cardiovascular alterations in diabetic populations.&#39;, &#39;By combining logarithmic \nregression for the diabetes stratum with linear regression for the non-diabetes stra-\ntum, the model achieved an overall MARD of 4.5%, RMSE of 18.9 mg/dL, and Pearson \ncorrelation of 0.985, underscoring the clear advantage of stratified modelling in \nreducing bias and improving predictive accuracy.&#39;, &#39;Table 5.&#39;, &#39;Estimation performance with stratification (Continued)\n\x0ciJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\n89\nA Stratified Modeling-Machine Learning Approach to Improve the Accuracy of Non-Invasive Blood Glucose Estimation Using Photoplethysmography Signals\nThe non-invasive blood glucose measurements from the developed system are \ncompared with those from the Accu Check glucometer, used as a reference for anal-\nysis via CEGA.&#39;, &#39;The CEG analysis without stratification is shown in Figure 8a, and the \nstratified analysis is presented in Figure 8b.&#39;, &#39;a) Without Stratiﬁcation\nb) With Stratiﬁcation\nFig.&#39;, &#39;8.&#39;, &#39;CEG for overall data (250 samples)\nWithout stratification, the CEG analysis places 26% in Region A, 71.6% in \nRegion B, and 2.6% in Region C. There were 97.6% results in clinically acceptable \nareas (A and B).&#39;, &#39;The 2.6% results in Region C represent clinically significant errors, \nindicating potentially dangerous results for treatment.&#39;, &#39;With stratification, 100% of \nmeasurements were in clinically acceptable areas, with 96% in Region A and 4% \nin Region B. Stratification improved non-diabetes strata estimates, moving them \nentirely to Region A while the diabetes stratum improved to 92% in Region A and \n8% in Region B.&#39;, &#39;The comparison of the system’s performance with and without strat-\nification shows a significant improvement, including a 77.83% reduction in MARD, \na 51.91% decrease in RMSE, a 0.065 increase in the Pearson correlation coefficient, \nand a CEG analysis showing 100% of test samples in areas A and B, indicating clinical \nacceptance.&#39;, &#39;Table 6 present the comparative data.&#39;, &#39;Table 6.&#39;, &#39;Estimation performance comparison in using stratification\nSystem\nMARD  \n(%)\nRMSE  \n(mg/dl)\nPearson \nCorrelation\nCEG\nWithout Stratification\n20.3\n39.3\n0.92\n26% in region A, 71,6% region B, \n2.6% region C\nWith Stratification\n4.5\n18.9\n0.985\n96% in region A, 4% in region B.&#39;, &#39;The estimation performance without stratification shows a MARD of 20.3% with \na 95% confidence interval of ±1.78% and an RMSE of 39.3 mg/dL with a 95% confi-\ndence interval of ±3.45%.&#39;, &#39;In contrast, with stratification, the MARD is reduced to 4.5%, \nindicating a significant improvement in estimation accuracy, with a narrower 95% \nconfidence interval of ±0.2%, and the RMSE decreases to 18.9 mg/dL with a 95% \nconfidence interval of ±0.84%.&#39;, &#39;This highlights the effectiveness of stratification in \nenhancing estimation accuracy.&#39;, &#39;Table 7 presents previous studies that developed \nnon-invasive blood glucose estimation.&#39;, &#39;90\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\niJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\nFitrilina et al.&#39;, &#39;Table 7.&#39;, &#39;Estimation performance comparison\nAuthors\nSignal\nMethod\nPerformance\nAkkaya et al.&#39;, &#39;[36]\nPPG\nMultiple Linear Regression\nCEG: 79.17% in region A \nand 20.83% in region B\nNanayakkara \net al.&#39;, &#39;[61]\nNIR\nLeast Squares  \nLinear Regression\nCEG: 73.3% in region A, \n26.7% in region B\nZhou X et al.&#39;, &#39;[26]\nNIR\nRandom Forest\nCEG: 80.35% in region A\nOlakammi O \net al.&#39;, &#39;[23]\nNIR\nLinear regression\nCEG: 62% in region A, \n23% in region B, 15% in region C\nWei Y et al.&#39;, &#39;[27]\nPPG\nRandom Forest\nMARD:12.19%\nCEG: 87.05% in region A.\nArgiielo-Prada E.j \net al.&#39;, &#39;[51]\nNIR PPG + US\nStatistical Analysis\nCEG: 91.57% in region A, \n9.43% in region B.\nE.-Y.&#39;, &#39;Park et al.&#39;, &#39;[62]\nInfraRed \nUOS technique\nMARD: 26.6%\nA.M. Joshi et al.&#39;, &#39;[63]\nNIRS\nMultiple Polynomial \nRegression degree 3\nMARD capillary glucose: 6.07%\nSerum glucose: 4.86%\nA. Hina et al.&#39;, &#39;[34]\nPPG\nGPR exponential\nMARD: 8.97%\nA. Hina et al.&#39;, &#39;[33]\nPPG\nFGSVR\nR2 = 0.937, MARD: 7.62%\nA. Hina et al.&#39;, &#39;[29]\nPPG\nEnsemble Boosted Tree\nMARD: 5.83%\nM. A. Al-Dhaheri \net al.&#39;, &#39;[24]\nPPG\nSimple Linear Regression\nRMSE: 10.44 mg/dl, R2: 0.839 \nCEG: clinically acceptable\nG. Hammour \net al.&#39;, &#39;[30]\nPPG\nEnsemble Regression\nCEG: 82% in region A,  \n18% in region B\nProposed method\nPPG\nStratified modelling \n(classification and simple \nregression)\nMARD: 4.5%\nRMSE: 18.9 mg/dl; R: 0.985\nCEG: 96% in region A, 4% in region B\nAs shown in Table 7, previous studies predicted blood glucose concentrations \nusing aggregated data from diabetic and non-diabetic populations.&#39;, &#39;This approach \nlikely increased dataset heterogeneity, making it more challenging to establish an \naccurate predictive model.&#39;, &#39;For instance, [21] applied linear regression to aggregated \ndata, resulting in 15% of measurements falling in Region C of the CEG.&#39;, &#39;In this study, \nwithout stratification, 2.6% of measurements were in Region C. After applying strat-\nification, 100% of outcomes fell within clinically acceptable regions, with significant \nimprovements in MARD and RMSE metrics.&#39;, &#39;Stratification enhances accuracy and \nrobustness by dividing heterogeneous data into more homogeneous subsets, align-\ning the model with the inherent characteristics of each group.&#39;, &#39;However, the effec-\ntiveness of this approach depends on a reliable classification phase to ensure the \ncorrect predictive model is applied.&#39;, &#39;The dataset in this study comprises 200 training samples and 50 testing samples, \nwhich is sufficient to demonstrate the effectiveness of the stratified modelling \napproach, which may limit the model’s robustness and generalizability.&#39;, &#39;The rela-\ntively small and homogeneous dataset and the absence of validation on external \ndata restrict its applicability to diverse populations.&#39;, &#39;Expanding the dataset and vali-\ndating with independent, more varied samples would enhance the model’s reliabil-\nity and provide more substantial evidence of its generalizability.&#39;, &#39;iJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\n91\nA Stratified Modeling-Machine Learning Approach to Improve the Accuracy of Non-Invasive Blood Glucose Estimation Using Photoplethysmography Signals\nThe current analysis relies on ADC voltage and age as predictors, chosen for their \ndirect relevance to estimating glucose levels.&#39;, &#39;These features sufficiently demonstrate \nthe method’s potential to prove the hypothesis that stratification can improve esti-\nmation accuracy.&#39;, &#39;Expanding the feature set to include features for classification, \nsuch as stiffness index (SI), heart rate variability (HRV), and body mass index, and \nfeatures for estimation, such as logarithmic energy entropy, Kaiser-Teager energy \nfeature (KTE), spectral entropy, and signal voltages, could further improve the accu-\nracy and robustness of the model.&#39;, &#39;Future studies should explore incorporating such \nfeatures to improve the generalizability of the proposed method.&#39;, &#39;This study focuses \non model development, but future research should explore integration into mobile \nhealth devices and clinical workflows.&#39;, &#39;This would require real-time data processing, \ndevice compatibility testing, and compliance with medical standards to enable \npractical non-invasive glucose monitoring and improved diabetes management.&#39;, &#39;4 \nCONCLUSION\nImplementing a stratified modeling-machine learning approach enhances the \naccuracy of non-invasive blood glucose concentration estimates.&#39;, &#39;This study shows a \n77.83% reduction in MARD and a 51.91% decrease in RMSE, with a 0.065 increase in the \nPearson correlation coefficient.&#39;, &#39;Additionally, stratified modeling improves CEG results, \nwith 100% of measurements in clinically acceptable regions A and B. Stratification \nyields better performance in the non-diabetes stratum compared to the diabetic stra-\ntum, where a linear regression model suits the non-diabetes data and a logarithmic \nregression model is more effective for diabetes.&#39;, &#39;However, further accuracy improve-\nments can be achieved with more robust classification and prediction models.&#39;, &#39;5 \nACKNOWLEDGMENT\nThis research is fully funded by the Ministry of Research and Higher Education \nby contract number: 041/E5/PG.02.00.PL/2024 in 2024.&#39;, &#39;6 \nREFERENCES\n\t [1]\t Conferences and Congresses, “International diabetes federation,” The Lancet, vol.&#39;, &#39;266, \nno.&#39;, &#39;6881, pp.&#39;, &#39;134–137, 1955. https://doi.org/10.1016/S0140-6736(55)92135-8\n\t [2]\t P. Saeedi et al., “Global and regional diabetes prevalence estimates for 2019 and pro-\njections for 2030 and 2045: Results from the international diabetes federation diabe-\ntes Atlas, 9th edition,” Diabetes Res.&#39;, &#39;Clin.&#39;, &#39;Pract., vol.&#39;, &#39;157, p. 107843, 2019. https://doi.&#39;, &#39;org/10.1016/j.diabres.2019.107843\n\t [3]\t E. Susana, K. Ramli, P. D. Purnamasari, and N. H. Apriantoro, “Non-invasive classifica-\ntion of blood glucose level based on photoplethysmography using time–frequency anal-\nysis,” Inf., vol.&#39;, &#39;14, no.&#39;, &#39;3, p. 145, 2023. https://doi.org/10.3390/info14030145\n\t [4]\t M. S. Asekar, “Development of portable non-invasive blood glucose measuring device \nusing NIR spectroscopy,” in 2018 Second Int.&#39;, &#39;Conf.&#39;, &#39;Intell.&#39;, &#39;Comput.&#39;, &#39;Control Syst., no.&#39;, &#39;Iciccs, \n2018, pp.&#39;, &#39;572–575.&#39;, &#39;https://doi.org/10.1109/ICCONS.2018.8663039\n\t [5]\t D. Ghozzi, Y. Manai, and K. Nouri, “Comparison of linear and non-linear regression \nmodels for non-invasive blood glucose measurement,” J. Comput.&#39;, &#39;Sci., vol.&#39;, &#39;15, no.&#39;, &#39;11, \npp.&#39;, &#39;1607–1616, 2019. https://doi.org/10.3844/jcssp.2019.1607.1616\n\x0c\t\n92\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\niJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\nFitrilina et al.&#39;, &#39;[6]\t B. Javid, F. G. Faranak, and F. S. Zakeri, “Noninvasive optical diagnostic techniques \nfor mobile blood glucose and bilirubin monitoring,” J. Med.&#39;, &#39;Signals Sens., vol.&#39;, &#39;8, no.&#39;, &#39;3, \npp.&#39;, &#39;125–139, 2018. https://doi.org/10.4103/jmss.JMSS_8_18\n\t [7]\t A. T. Priyoti, S. J. Jim, S. Hossain, S. Mahmud, S. Salvin, and A. Bhattacharjee, “Non-\ninvasive blood glucose measurement using near infra-red spectroscopy,” IEEE Reg.&#39;, &#39;10 Humanit.&#39;, &#39;Technol.&#39;, &#39;Conf.&#39;, &#39;R10-HTC, 2019, pp.&#39;, &#39;1139–1142.&#39;, &#39;https://doi.org/10.1109/\nR10-HTC47129.2019.9042473\n\t [8]\t S. Rana, J. Verma, and A. K. Gautam, “Online and biomedical engineering,” Int.&#39;, &#39;J. Online \nBiomed.&#39;, &#39;Eng., vol.&#39;, &#39;19, no.&#39;, &#39;9, pp.&#39;, &#39;122–130, 2023. https://doi.org/10.3991/ijoe.v19i09.37065\n\t [9]\t I. Ndakara Abubakar, M. Essabbar, and H. Saikouk, “Optimizing blood glucose regulation \nin type 1 diabetes patients via genetic algorithm-based fuzzy logic controller consider-\ning substantial meal protocol,” vol.&#39;, &#39;20, no.&#39;, &#39;6, pp.&#39;, &#39;61–85, 2024. https://doi.org/10.3991/ \nijoe.v20i06.46929\n\t[10]\t S. A. Aswathy and L. Anusree, “Non invasive blood glucose detection along with an \nassistive diabetes monitoring app,” in Proc.&#39;, &#39;2018 Int.&#39;, &#39;Conf.&#39;, &#39;Curr.&#39;, &#39;Trends Towar.&#39;, &#39;Converging \nTechnol.&#39;, &#39;ICCTCT 2018, pp.&#39;, &#39;1–5, 2018. https://doi.org/10.1109/ICCTCT.2018.8551094\n\t[11]\t J. Yadav, A. Rani, V. Singh, and B. Moahn, “Comparative study of different measurement \nsites using NIR based non-invasive glucose measurement system,” Procedia Computer \nScience, vol.&#39;, &#39;70, pp.&#39;, &#39;469–475, 2015. https://doi.org/10.1016/j.procs.2015.10.082\n\t[12]\t R. P. Jenie et al., “Device for noninvasive optical measurement of blood glucose level \nbased on discrete Fourier transform and fast artificial neural network,” J. Med.&#39;, &#39;Devices, \nTrans.&#39;, &#39;ASME, vol.&#39;, &#39;13, no.&#39;, &#39;4, 2019. https://doi.org/10.1115/1.4044336\n\t[13]\t K. Sarkar, D. Ahmad, S. K. Singha, and M. Ahmad, “Design and implementation of a non-\ninvasive blood glucose monitoring device,” in 2018 21st Int.&#39;, &#39;Conf.&#39;, &#39;Comput.&#39;, &#39;Inf.&#39;, &#39;Technol.&#39;, &#39;(ICCIT 2018), 2018, pp.&#39;, &#39;1–5.&#39;, &#39;https://doi.org/10.1109/ICCITECHN.2018.8631942\n\t[14]\t N. D. Nanayakkara, S. C. Munasingha, and G. P. Ruwanpathirana, “Non-invasive blood \nglucose monitoring using a hybrid technique,” MERCon 2018 – 4th Int.&#39;, &#39;Multidiscip.&#39;, &#39;Moratuwa Eng.&#39;, &#39;Res.&#39;, &#39;Conf., 2018, pp.&#39;, &#39;7–12.&#39;, &#39;https://doi.org/10.1109/MERCon.2018.8421885\n\t[15]\t J. H. Andersen et al., “Bioimpedance and NIR for non-invasive assessment of blood glu-\ncose,” J. Electr.&#39;, &#39;Bioimpedance, vol.&#39;, &#39;10, no.&#39;, &#39;1, pp.&#39;, &#39;133–138, 2019. https://doi.org/10.2478/\njoeb-2019-0019\n\t[16]\t J. Yadav, A. Rani, V. Singh, and B. M. Murari, “Levenberg – Marquardt-based non-invasive \nblood glucose measurement system,” IeTe Journal of Research, vol.&#39;, &#39;64, no.&#39;, &#39;1, pp.&#39;, &#39;116–123, \n2017. https://doi.org/10.1080/03772063.2017.1351313\n\t[17]\t S. Habbu, M. Dale, and R. Ghongade, “Estimation of blood glucose by non-invasive \nmethod using photoplethysmography,” Sadhana – Acad.&#39;, &#39;Proc.&#39;, &#39;Eng.&#39;, &#39;Sci., vol.&#39;, &#39;44, 2019. \nhttps://doi.org/10.1007/s12046-019-1118-9\n\t[18]\t J. L. Moraes, M. X. Rocha, G. G. Vasconcelos, J. E. Vasconcelos Filho, V. H. C. de Albuquerque, \nand A. R. Alexandria, “Advances in photopletysmography signal analysis for biomedical \napplications,” Sensors, vol.&#39;, &#39;18, no.&#39;, &#39;6, pp.&#39;, &#39;1–26, 2018. https://doi.org/10.3390/s18061894\n\t[19]\t J. Allen, “Photoplethysmography and its application in clinical physiological measure-\nment,” Physiol.&#39;, &#39;Meas., vol.&#39;, &#39;28, no.&#39;, &#39;3, 2007. https://doi.org/10.1088/0967-3334/28/3/R01\n\t[20]\t V. P. Rachim and W. Y. Chung, “Wearable-band type visible-near infrared optical bio-\nsensor for non-invasive blood glucose monitoring,” Sensors Actuators, B Chem., vol.&#39;, &#39;286, \npp.&#39;, &#39;173–180, 2019. https://doi.org/10.1016/j.snb.2019.01.121\n\t[21]\t S. Deepthi, N. S. Valke, J. P. Parvathy, A. K. Sai, and G. Sajjan, “Non-invasive blood glucose \nmeasurement system,” in 2019 5th IEEE Int.&#39;, &#39;WIE Conf.&#39;, &#39;Electr.&#39;, &#39;Comput.&#39;, &#39;Eng.&#39;, &#39;WIECON-ECE \n2019 – Proc., 2019, pp.&#39;, &#39;1–4.&#39;, &#39;https://doi.org/10.1109/WIECON-ECE48653.2019.9019919\n\t[22]\t S. Venkataramanan, D. Kamble, A. Bairolu, A. Singh, and R. Rao, “A novel heart rate and \nnon-invasive glucose measuring device,” in Proc.&#39;, &#39;2017 IEEE Int.&#39;, &#39;Conf.&#39;, &#39;Commun.&#39;, &#39;Signal \nProcess, ICCSP 2017, 2018, pp.&#39;, &#39;1796–1800.&#39;, &#39;https://doi.org/10.1109/ICCSP.2017.8286704\n\x0ciJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\n93\nA Stratified Modeling-Machine Learning Approach to Improve the Accuracy of Non-Invasive Blood Glucose Estimation Using Photoplethysmography Signals\n\t[23]\t O. Olakanmi, I.&#39;, &#39;A. Kamil, and O. P. Atilola, “NIBG: An efficient near-infrared spectroscopy- \nbased device for tele-monitoring blood glucose level of diabetes outpatients in an \ne-health system,” Int.&#39;, &#39;J. Biomed.&#39;, &#39;Eng.&#39;, &#39;Technol., vol.&#39;, &#39;30, no.&#39;, &#39;2, pp.&#39;, &#39;95–112, 2019. https://doi.&#39;, &#39;org/10.1504/IJBET.2019.100553\n\t[24]\t M. A. Al-Dhaheri, N. E. Mekkakia-Maaza, H. Mouhadjer, and A. Lakhdari, “Noninvasive \nblood glucose monitoring system based on near-infrared method,” Int.&#39;, &#39;J. Electr.&#39;, &#39;Comput.&#39;, &#39;Eng., vol.&#39;, &#39;10, no.&#39;, &#39;2, pp.&#39;, &#39;1736–1746, 2020. https://doi.org/10.11591/ijece.v10i2.&#39;, &#39;pp1736-1746\n\t[25]\t Y. Yu, J. Huang, J. Zhu, and S. Liang, “An accurate noninvasive blood glucose mea-\nsurement system using portable near-infrared spectrometer and transfer learning \nframework,” IEEE Sens.&#39;, &#39;J., vol.&#39;, &#39;21, no.&#39;, &#39;3, pp.&#39;, &#39;3506–3519, 2021. https://doi.org/10.1109/\nJSEN.2020.3025826\n\t[26]\t X. Zhou, R. Lei, B. W.-K. Ling, and C. Li, “Joint empirical mode decomposition and sin-\ngular spectrum analysis based pre-processing method for wearable non-invasive blood \nglucose esrimation,” in 2019 IEEE 4th International Conference on Signal and Image \nProcessing, 2019, pp.&#39;, &#39;259–263.&#39;, &#39;https://doi.org/10.1109/SIPROCESS.2019.8868879\n\t[27]\t Y. Wei, B. W. K. Ling, Q. Liu, and J. Liu, “Multi-models with averaging in feature \ndomain for non-invasive blood glucose estimation,” in ISPCE-ASIA 2022 – IEEE Int.&#39;, &#39;Symp.&#39;, &#39;Prod.&#39;, &#39;Compliance Eng.&#39;, &#39;– Asia 2022, 2022, pp.&#39;, &#39;1–6.&#39;, &#39;https://doi.org/10.1109/ISPCE- \nASIA57917.2022.9971019\n\t[28]\t Y.&#39;, &#39;Sun et al., “Random forest analysis of combined millimeter-wave and near- \ninfrared sensing for non-invasive glucose detection,” IEEE Sens.&#39;, &#39;J., vol.&#39;, &#39;23, no.&#39;, &#39;17, \npp.&#39;, &#39;20294–20309, 2023. https://doi.org/10.1109/JSEN.2023.3293248\n\t[29]\t A. Hina, S. Minto, and W. Saadeh, “A 208μW PPG-based glucose monitoring SoC using \nensembled boosted trees,” in 20th IEEE Int.&#39;, &#39;Interreg.&#39;, &#39;NEWCAS Conf.&#39;, &#39;NEWCAS 2022 – \nProc., 2022, pp.&#39;, &#39;241–245.&#39;, &#39;https://doi.org/10.1109/NEWCAS52662.2022.9842163\n\t[30]\t G. Hammour and D. P. Mandic, “An in-ear PPG-based blood glucose monitor: A proof-of-\nconcept study,” Sensors, vol.&#39;, &#39;23, no.&#39;, &#39;6, p. 3319, 2023. https://doi.org/10.3390/s23063319\n\t[31]\t C.-T.&#39;, &#39;Yen, U. Chen, G.-C. Wang, and Z.-X.&#39;, &#39;Chen, “Non-invasive blood glucose estimation \nsystem based on a and bioelectrical impedance measuring,” Sensors, vol.&#39;, &#39;22, no.&#39;, &#39;12, \npp.&#39;, &#39;1–13, 2022. https://doi.org/10.3390/s22124452\n\t[32]\t Q. Pham, T. Nguyen, A. H. Ba, H. Ngo, H. Vo, and N. Tran, “An embedded system for \nnon-invasive glucose monitoring,” in 2023 Int.&#39;, &#39;Conf.&#39;, &#39;Multimed.&#39;, &#39;Anal.&#39;, &#39;Pattern Recognit., \n2023, pp.&#39;, &#39;1–6.&#39;, &#39;https://doi.org/10.1109/MAPR59823.2023.10289110\n\t[33]\t A. Hina and W. Saadeh, “A Noninvasive glucose monitoring SoC based on single \nwavelength photoplethysmography,” IEEE Trans.&#39;, &#39;Biomed.&#39;, &#39;Circuits Syst., vol.&#39;, &#39;14, no.&#39;, &#39;3, \npp.&#39;, &#39;504–515, 2020. https://doi.org/10.1109/TBCAS.2020.2979514\n\t[34]\t A. Hina, H. Nadeem, and W. Saadeh, “A single LED photoplethysmography-based non-\ninvasive glucose monitoring prototype system,” in Proc.&#39;, &#39;– IEEE Int.&#39;, &#39;Symp.&#39;, &#39;Circuits Syst., \n2019, pp.&#39;, &#39;1–5.&#39;, &#39;https://doi.org/10.1109/ISCAS.2019.8702747\n\t[35]\t P. P. Pai, P. K. Sanki, S. K. Sahoo, A.&#39;, &#39;De, S. Bhattacharya, and S. Banerjee, “Cloud \ncomputing-based non-invasive glucose monitoring for diabetic care,” IEEE Trans.&#39;, &#39;Circuits Syst.&#39;, &#39;I Regul.&#39;, &#39;Pap., vol.&#39;, &#39;65, no.&#39;, &#39;2, pp.&#39;, &#39;663–676, 2018. https://doi.org/10.1109/\nTCSI.2017.2724012\n\t[36]\t I. Akkaya, E. Selim, M. Altintas, and M. Engin, “Power spectral density-based nearin-\nfrared sub-band detection for noninvasive blood glucose prediction in both in-vitro \nand in-vivo studies,” J. Innov.&#39;, &#39;Opt.&#39;, &#39;Health Sci., vol.&#39;, &#39;11, no.&#39;, &#39;6, pp.&#39;, &#39;1–12, 2018. https://doi.&#39;, &#39;org/10.1142/S1793545818500359\n\t[37]\t G. Noroozi, “Data heterogeneity and its implications for fairness,” Electron.&#39;, &#39;Thesis Diss.&#39;, &#39;Repos., 2023.&#39;, &#39;94\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\niJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\nFitrilina et al.&#39;, &#39;[38]\t A. Nunes, T. Trappenberg, and M. Alda, “The definition and measurement of hetero-\ngeneity,” Transl.&#39;, &#39;Psychiatry, vol.&#39;, &#39;10, pp.&#39;, &#39;1–13, 2020. https://doi.org/10.1038/s41398-020- \n00986-0\n\t[39]\t O. J. Ibidoja, F. P. Shan, J. Sulaiman, and M. K. M. Ali, “Detecting heterogeneity parameters \nand hybrid models for precision farming,” J.&#39;, &#39;Big Data, vol.&#39;, &#39;10, no.&#39;, &#39;1, 2023. https://doi.&#39;, &#39;org/10.1186/s40537-023-00810-8\n\t[40]\t A. Karpatne, A. Khandelwal, S. Boriah, and V. Kumar, “Predictive learning in the pres-\nence of heterogeneity and limited training data,” in SIAM Int.&#39;, &#39;Conf.&#39;, &#39;Data Min.&#39;, &#39;2014, SDM \n2014, 2014, pp.&#39;, &#39;253–261.&#39;, &#39;https://doi.org/10.1137/1.9781611973440.29\n\t[41]\t J. Tuck and S. Boyd, “Fitting Laplacian regularized stratified models,” SSRN, 2020. https://\ndoi.org/10.2139/ssrn.3608009\n\t[42]\t D. T.-M. Dinh, V. A. Truong, A. N.-P. Tran, H. X.&#39;, &#39;Le, and H. T.-T. Pham, “Non-invasive \nglucose monitoring system utilizing near-infrared technology,” in 7th International \nConference on the Development of Biomedical Engineering in Vietnam (BME7), IFMBE \nProceedings 69, Cham: Springer International Publishing, 2020, pp.&#39;, &#39;401–405.&#39;, &#39;https://doi.&#39;, &#39;org/10.1007/978-981-13-5859-3_71\n\t[43]\t T. W. Gamessa and D. Suman, “Non-invasive blood glucose monitoring using vis-\nible laser light non-invasive blood glucose monitoring using visible laser light,” \nResearch Journal of Pharmacy and Technology, vol.&#39;, &#39;12, no.&#39;, &#39;2, 2019. https://doi.&#39;, &#39;org/10.5958/0974-360X.2019.00144.6\n\t[44]\t B.&#39;, &#39;A. Al-Ghali, H. H. Alzubeidy, and Z. T. Al-Dahan, “Non-invasive measurement of arte-\nrial pH during cardiopulmonary bypass,” Int.&#39;, &#39;J. online Biomed.&#39;, &#39;Eng., vol.&#39;, &#39;18, no.&#39;, &#39;10, pp.&#39;, &#39;190–198, 2022. https://doi.org/10.3991/ijoe.v18i10.31523\n\t[45]\t P. Schober and L. A. Schwarte, “Correlation coefficients: Appropriate use and inter-\npretation,” Anesth.&#39;, &#39;Analg., vol.&#39;, &#39;126, no.&#39;, &#39;5, pp.&#39;, &#39;1763–1768, 2018. https://doi.org/10.1213/\nANE.0000000000002864\n\t[46]\t H. Mondal and S. Mondal, “Clarke error grid analysis on graph paper and \nMicrosoft Excel,” J. Diabetes Sci.&#39;, &#39;Technol., vol.&#39;, &#39;14, no.&#39;, &#39;2, p. 499, 2019. https://doi.&#39;, &#39;org/10.1177/1932296819890875\n\t[47]\t N. A.rocha Jr and R. San Jose Reyes, “Non-invasive glucose monitoring with combina-\ntions of near infrared spectroscopy and metabolic heat conformation technology using \nmultivariate analysis approach,” in ACM Int.&#39;, &#39;Conf.&#39;, &#39;Proceeding Ser., 2021, pp.&#39;, &#39;83–89.&#39;, &#39;https://doi.org/10.1145/3431943.3431957\n\t[48]\t W. V. Gonzales, A. T. Mobashsher, and A. Abbosh, “The progress of glucose monitoring— \nA review of invasive to minimally and non-invasive techniques, devices and sensors,” \nSensors, vol.&#39;, &#39;19, no.&#39;, &#39;4, p. 800, 2019. https://doi.org/10.3390/s19040800\n\t[49]\t M. Naresh and S. Peddakrishna, “Non-invasive glucose measurement using 950 nm \nreflective short wave NIR technique,” Res.&#39;, &#39;Biomed.&#39;, &#39;Eng., vol.&#39;, &#39;39, pp.&#39;, &#39;747–757, 2023. \nhttps://doi.org/10.1007/s42600-023-00308-5\n\t[50]\t M. Ionescu, “Glucometry and pulse oximetry-comparative noninvasive methods for \ndetermining blood glucose,” in 2019 7th E-Health Bioeng.&#39;, &#39;Conf.&#39;, &#39;EHB 2019, 2019, pp.&#39;, &#39;1–4.&#39;, &#39;https://doi.org/10.1109/EHB47216.2019.8970001\n\t[51]\t E. J. Argüello-Prada and S. M. Bolaños, “On the role of perfusion index for estimating \nblood glucose levels with ultrasound-assisted and conventional finger photopleth-\nysmography in the near-infrared wavelength range,” Biomed.&#39;, &#39;Signal Process.&#39;, &#39;Control, \nvol.&#39;, &#39;86, p. 105338, 2023. https://doi.org/10.1016/j.bspc.2023.105338\n\t[52]\t V. R. Reddy, A. D. Choudhury, S. Jayaraman, N. K. Thokala, P. Deshpande, and \nV. Kaliaperumal, “PerDMCS: Weighted fusion of PPG signal features for robust and \nefficient diabetes mellitus classification,” in Proceedings of the 10th International Joint \nConference on Biomedical Engineering Systems and Technologies (BIOSTEC 2017) – \nSmartMedDev, 2017, pp.&#39;, &#39;553–560.&#39;, &#39;https://doi.org/10.5220/0006297205530560\n\x0ciJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\n95\nA Stratified Modeling-Machine Learning Approach to Improve the Accuracy of Non-Invasive Blood Glucose Estimation Using Photoplethysmography Signals\n\t[53]\t N. Nirala, R. Periyasamy, B. K. Singh, and A. Kumar, “Detection of type-2 diabetes using \ncharacteristics of toe photoplethysmogram by applying support vector machine,” \nBiocybern.&#39;, &#39;Biomed.&#39;, &#39;Eng., vol.&#39;, &#39;39, no.&#39;, &#39;1, pp.&#39;, &#39;38–51, 2019. https://doi.org/10.1016/j.bbe.&#39;, &#39;2018.09.007\n\t[54]\t C. Hettiarachchi and C. Chitraranjan, “A machine learning approach to predict diabe-\ntes using short recorded photoplethysmography and physiological characteristics,” in \nArtificial Intelligence in Medicine.&#39;, &#39;AIME 2019. in Lecture Notes in Computer Science, \nD. Riaño, S. Wilk, and A. ten Teije, Eds., vol.&#39;, &#39;11526, Springer, Cham, 2019. https://doi.&#39;, &#39;org/10.1007/978-3-030-21642-9_41\n\t[55]\t Y. K. Qawqzeh, A. S. Bajahzar, M. Jemmali, M. M. Otoom, and A. Thaljaoui, “Classification \nof diabetes using photoplethysmogram (PPG) waveform analysis: Logistic regres-\nsion modeling,” Biomed.&#39;, &#39;Res.&#39;, &#39;Int., vol.&#39;, &#39;2020, no.&#39;, &#39;1, 2020. https://doi.org/10.1155/2020/ \n3764653\n\t[56]\t A. Prabha, J. Yadav, A. Rani, and V. Singh, “Non-invasive diabetes mellitus detection \nsystem using machine learning techniques,” in Proc.&#39;, &#39;Conflu.&#39;, &#39;2021 11th Int.&#39;, &#39;Conf.&#39;, &#39;Cloud \nComput.&#39;, &#39;Data Sci.&#39;, &#39;Eng., 2021, pp.&#39;, &#39;948–953.&#39;, &#39;https://doi.org/10.1109/Confluence51648.2021.&#39;, &#39;9377138\n\t[57]\t J. Chu, W.-T. Yang, T.-H. Hsieh, and F.-L. Yang, “One-minute finger pulsation measure-\nment for diabetes rapid screening with 1.3% to 13% false-negative prediction rate,” \nBiomed.&#39;, &#39;Stat.&#39;, &#39;Informatics, vol.&#39;, &#39;6, no.&#39;, &#39;1, pp.&#39;, &#39;6–13, 2021. https://doi.org/10.11648/j.bsi.&#39;, &#39;20210601.12\n\t[58]\t C. Ouyang, P. Zhou, and Z. Gan, “A non-invasive test method for type-2 diabetes melli-\ntus by pulse waveform fitting,” Biomed.&#39;, &#39;Signal Process.&#39;, &#39;Control, vol.&#39;, &#39;60, p. 102000, 2020. \nhttps://doi.org/10.1016/j.bspc.2020.102000\n\t[59]\t S. Zanelli, M. Ammi, M. Hallab, and M. A. El Yacoubi, “Diabetes detection and management \nthrough photoplethysmographic and electrocardiographic signals analysis: A systematic \nreview,” Sensors, vol.&#39;, &#39;22, no.&#39;, &#39;13, pp.&#39;, &#39;1–28, 2022. https://doi.org/10.3390/s22134890\n\t[60]\t H. Tjahjadi, H. Sudaryanto, A. Budi Rahmanto, A. V. Lesmana, A. Ilham Irianto, and \nO. Alifian, “A review of non-invasive monitoring of blood glucose levels based on \nphotoplethysmography signals using artificial intelligence,” in Proc.&#39;, &#39;– ICACSIS 2022 \n14th Int.&#39;, &#39;Conf.&#39;, &#39;Adv.&#39;, &#39;Comput.&#39;, &#39;Sci.&#39;, &#39;Inf.&#39;, &#39;Syst., 2022, pp.&#39;, &#39;111–116.&#39;, &#39;https://doi.org/10.1109/\nICACSIS56558.2022.9923513\n\t[61]\t N. D. Nanayakkara, S. C. Munasingha, and G. P. Ruwanpathirana, “Non-invasive blood \nglucose monitoring using a hybrid technique,” MERCon 2018 – 4th Int.&#39;, &#39;Multidiscip.&#39;, &#39;Moratuwa Eng.&#39;, &#39;Res.&#39;, &#39;Conf., 2018, pp.&#39;, &#39;7–12.&#39;, &#39;https://doi.org/10.1109/MERCon.2018.8421885\n\t[62]\t E.-Y.&#39;, &#39;Park, J. Baik, H. Kim, S.-M. Park, and C. Kim, “Ultrasound-modulated optical glu-\ncose sensing using a 1645 nm laser,” Sci.&#39;, &#39;Rep., vol.&#39;, &#39;10, 2020. https://doi.org/10.1038/\ns41598-020-70305-6\n\t[63]\t A. M. Joshi, P. Jain, S. P. Mohanty, and N. Agrawal, “IGLU 2.0: A new wearable for accu-\nrate non-invasive continuous serum glucose measurement in IoMT framework,” IEEE \nTrans.&#39;, &#39;Consum.&#39;, &#39;Electron., vol.&#39;, &#39;66, no.&#39;, &#39;4, pp.&#39;, &#39;327–335, 2020. https://doi.org/10.1109/\nTCE.2020.3011966\n7 \nAUTHORS\nFitrilina earned her Bachelor’s degree in Electrical Engineering from Universitas \nAndalas, Indonesia, and her Master’s degree in Electrical Engineering from Institut \nTeknologi Bandung, Indonesia.&#39;, &#39;She is pursuing a PhD in the Electrical Engineering \nDepartment at Universitas Andalas (E-mail: fitrilina@unib.ac.id).&#39;, &#39;96\t\nInternational Journal of Online and Biomedical Engineering (iJOE)\t\niJOE | Vol.&#39;, &#39;21 No.&#39;, &#39;6 (2025)\nFitrilina et al.&#39;, &#39;Muhammad Ilhamdi Rusydi (IEEE Member) earned his Bachelor’s and \nMaster’s degrees in Electrical Engineering from the Institute of Technology Bandung, \nIndonesia, and his Ph.D. from Gifu University, Japan.&#39;, &#39;Since 2005, Universitas \nAndalas has employed him as a Lecturer, and he was promoted to full Professor \nin 2023.&#39;, &#39;His teaching responsibilities include biosignals, robotics, and control sys-\ntems.&#39;, &#39;His research focuses on control robotics and assistive technology for medical \napplications.&#39;, &#39;Currently, he serves as the Vice Dean for Academic and Student Affairs \nat the Faculty of Engineering, Universitas Andalas (E-mail: rusydi@eng.unand.ac.id).&#39;, &#39;Rahmadi Kurnia received his Bachelor’s (1995) and Master’s (1998) degrees in \nElectrical Engineering from Universitas Indonesia.&#39;, &#39;He earned his doctorate in 2006 \nfrom Saitama University, Japan.&#39;, &#39;He is currently working as a Lecturer in the Electrical \nEngineering Department at Universitas Andalas (E-mail: kurnia@eng.unand.ac.id).&#39;, &#39;Noverika Windasari completed her general medical education at the Faculty \nof Medicine, Universitas Andalas (2010).&#39;, &#39;She continued specialist education in \nForensic Medicine and Medicolegal Studies at the Faculty of Medicine, Pajdjadjaran \nUniversity, Bandung (2016–2020).&#39;, &#39;Currently, Dr. Winda is the Head of the Department \nof Forensics and Medicolegal, Faculty of Medicine, Universitas Andalas.&#39;, &#39;She is \nalso the Secretary of the Research Ethics Commission of the Faculty of Medicine, \nUniversitas Andalas.&#39;, &#39;Raffi Zahrandhika Putra graduated with a Bachelor’s degree in Electrical \nEngineering from Universitas Bengkulu, Indonesia.&#39;, &#39;He is currently working as a \nSpecialist Consultant in Mechanical and Electrical (Instrumentation Control) at a \nConsulting Services Company in South Jakarta, Jakarta, Indonesia (E-mail: raffizah-\nrandhikap@gmail.com).&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mengubah-sekumpulan-data-list-menjadi-bentuk-tabel-dataframe">
+<h2>Mengubah sekumpulan data (list) menjadi bentuk tabel (DataFrame)<a class="headerlink" href="#mengubah-sekumpulan-data-list-menjadi-bentuk-tabel-dataframe" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">sentences</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;kalimat&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                               kalimat
+0    \t\n76\t\nInternational Journal of Online and ...
+1                                               21 No.
+2         6 (2025)\niJOE  |  eISSN: 2626-8493  |  Vol.
+3                                               21 No.
+4    6 (2025)  | \nJOE\nInternational Journal of \n...
+..                                                 ...
+602  She continued specialist education in \nForens...
+603  Currently, Dr. Winda is the Head of the Depart...
+604  She is \nalso the Secretary of the Research Et...
+605  Raffi Zahrandhika Putra graduated with a Bache...
+606  He is currently working as a \nSpecialist Cons...
+
+[607 rows x 1 columns]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-data-di-atas-menjadi-csv">
+<h2>Import data di atas menjadi csv<a class="headerlink" href="#import-data-di-atas-menjadi-csv" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;kalimat.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Untuk membuat word graph</p>
+<p>Lanjutkan dengan menggunakan <a class="reference external" href="https://www.geeksforgeeks.org/nlp/co-occurence-matrix-in-nlp/">https://www.geeksforgeeks.org/nlp/co-occurence-matrix-in-nlp/</a></p>
+</section>
+<section id="co-occurrence-matrix-matriks-kemunculan-bersama">
+<h2>Co-occurrence Matrix (Matriks Kemunculan Bersama)<a class="headerlink" href="#co-occurrence-matrix-matriks-kemunculan-bersama" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tokenize</span><span class="w"> </span><span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span><span class="p">,</span> <span class="n">Counter</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Download NLTK resources</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;kalimat.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;kalimat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">))</span>
+
+<span class="c1"># Preprocess the text</span>
+<span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">))</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span> <span class="ow">and</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
+
+<span class="c1"># Define the window size for co-occurrence</span>
+<span class="n">window_size</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># Create a list of co-occurring word pairs</span>
+<span class="n">co_occurrences</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="n">Counter</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="n">window_size</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">),</span> <span class="n">i</span> <span class="o">+</span> <span class="n">window_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">:</span>
+            <span class="n">co_occurrences</span><span class="p">[</span><span class="n">word</span><span class="p">][</span><span class="n">words</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># Create a list of unique words</span>
+<span class="n">unique_words</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">words</span><span class="p">))</span>
+
+<span class="c1"># Initialize the co-occurrence matrix</span>
+<span class="n">co_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">unique_words</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_words</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="c1"># Populate the co-occurrence matrix</span>
+<span class="n">word_index</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span> <span class="n">idx</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unique_words</span><span class="p">)}</span>
+<span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">neighbors</span> <span class="ow">in</span> <span class="n">co_occurrences</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">neighbor</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">neighbors</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">co_matrix</span><span class="p">[</span><span class="n">word_index</span><span class="p">[</span><span class="n">word</span><span class="p">]][</span><span class="n">word_index</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]]</span> <span class="o">=</span> <span class="n">count</span>
+
+<span class="c1"># Create a DataFrame for better readability</span>
+<span class="n">co_matrix_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">co_matrix</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">unique_words</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">unique_words</span><span class="p">)</span>
+
+<span class="c1"># Display the co-occurrence matrix</span>
+<span class="n">co_matrix_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-b5401164-d3b1-4b89-aa50-d457a5a39e4f" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>see</th>
+      <th>mouhadjer</th>
+      <th>pearson</th>
+      <th>rf</th>
+      <th>decreases</th>
+      <th>many</th>
+      <th>atlas</th>
+      <th>7a</th>
+      <th>exhibited</th>
+      <th>5</th>
+      <th>...</th>
+      <th>saikouk</th>
+      <th>conference</th>
+      <th>detecting</th>
+      <th>34</th>
+      <th>abbosh</th>
+      <th>decrease</th>
+      <th>manai</th>
+      <th>sulaiman</th>
+      <th>estimating</th>
+      <th>stages</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>see</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>mouhadjer</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>pearson</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>rf</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>decreases</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>decrease</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>manai</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>sulaiman</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>estimating</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>stages</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1635 rows × 1635 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b5401164-d3b1-4b89-aa50-d457a5a39e4f')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-b5401164-d3b1-4b89-aa50-d457a5a39e4f button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-b5401164-d3b1-4b89-aa50-d457a5a39e4f');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-4f2056cd-9956-4908-8716-5571b91ed63f">
+      <button class="colab-df-quickchart" onclick="quickchart('df-4f2056cd-9956-4908-8716-5571b91ed63f')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-4f2056cd-9956-4908-8716-5571b91ed63f button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+  <div id="id_db3e987c-7a4d-4b17-9655-f58ce9943c64">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('co_matrix_df')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_db3e987c-7a4d-4b17-9655-f58ce9943c64 button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('co_matrix_df');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+<section id="installasi-networkx">
+<h2>Installasi networkx<a class="headerlink" href="#installasi-networkx" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">capture</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">networkx</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mengubah-data-matriks-tabel-angka-menjadi-struktur-graf-jaringan-network-graph">
+<h2>mengubah data matriks (tabel angka) menjadi struktur Graf Jaringan (Network Graph)<a class="headerlink" href="#mengubah-data-matriks-tabel-angka-menjadi-struktur-graf-jaringan-network-graph" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">co_matrix_df</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">G</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">from_numpy_array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualisai-word-graph-node-dengan-label-angka">
+<h2>Visualisai Word Graph Node dengan Label angka<a class="headerlink" href="#visualisai-word-graph-node-dengan-label-angka" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Graf co-occurence (Dasar)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/f1bf028994a86ba170514988c334f1a48376b6cddda681564ed0c897ae119293.png" src="_images/f1bf028994a86ba170514988c334f1a48376b6cddda681564ed0c897ae119293.png" />
+</div>
+</div>
+</section>
+<section id="visualisai-word-graph-node-dengan-label-kata">
+<h2>Visualisai Word Graph Node dengan Label Kata<a class="headerlink" href="#visualisai-word-graph-node-dengan-label-kata" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Buat kamus (dictionary) yang memetakan angka ke kata</span>
+<span class="c1"># Pastikan &#39;unique_words&#39; sudah terdefinisi dari cell sebelumnya</span>
+<span class="n">mapping_labels</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span> <span class="n">word</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unique_words</span><span class="p">)}</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+    <span class="n">G</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="n">mapping_labels</span><span class="p">,</span>  <span class="c1"># &lt;--- TAMBAHKAN INI</span>
+    <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">node_size</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
+    <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span>
+    <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Word Graph dengan Node Berlabel Kata&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/def4694658da17e42078a03f7e5e4751e4c184664b4a19b70152aecad1e8b576.png" src="_images/def4694658da17e42078a03f7e5e4751e4c184664b4a19b70152aecad1e8b576.png" />
+</div>
+</div>
+</section>
+<section id="mengubah-label-titik-node-pada-graf-yang-tadinya-berupa-angka-indeks-0-1-2-kembali-menjadi-kata-aslinya-teks">
+<h2>mengubah label titik (node) pada graf yang tadinya berupa angka indeks (0, 1, 2…) kembali menjadi kata aslinya (teks)<a class="headerlink" href="#mengubah-label-titik-node-pada-graf-yang-tadinya-berupa-angka-indeks-0-1-2-kembali-menjadi-kata-aslinya-teks" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span> <span class="n">word</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unique_words</span><span class="p">)}</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">relabel_nodes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">mapping</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menghitung-tingkat-kepentingan-pagerank-setiap-kata-dan-menampilkan-10-kata-kunci-keywords-paling-dominan">
+<h2>menghitung tingkat kepentingan (PageRank) setiap kata dan menampilkan 10 kata kunci (keywords) paling dominan<a class="headerlink" href="#menghitung-tingkat-kepentingan-pagerank-setiap-kata-dan-menampilkan-10-kata-kunci-keywords-paling-dominan" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.85</span><span class="p">)</span>
+<span class="n">pr_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">pr</span><span class="o">.</span><span class="n">items</span><span class="p">()),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Kata&#39;</span><span class="p">,</span> <span class="s1">&#39;PageRank&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;PageRank&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pr_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            Kata  PageRank
+1402     glucose  0.017931
+920        blood  0.013987
+1491       https  0.010429
+1358         100  0.009736
+670          vol  0.008923
+1470    diabetes  0.008172
+899        using  0.008018
+779   regression  0.007687
+415           pp  0.007032
+1166        data  0.006949
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">self_loops</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">nx</span><span class="o">.</span><span class="n">selfloop_edges</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Self-loop edges:&quot;</span><span class="p">,</span> <span class="n">self_loops</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Self-loop edges: [(&#39;2022&#39;, &#39;2022&#39;), (&#39;engineering&#39;, &#39;engineering&#39;), (&#39;2014&#39;, &#39;2014&#39;), (&#39;99&#39;, &#39;99&#39;), (&#39;ahmad&#39;, &#39;ahmad&#39;), (&#39;97&#39;, &#39;97&#39;), (&#39;stratum&#39;, &#39;stratum&#39;), (&#39;stratiﬁcation&#39;, &#39;stratiﬁcation&#39;), (&#39;region&#39;, &#39;region&#39;), (&#39;linear&#39;, &#39;linear&#39;), (&#39;classification&#39;, &#39;classification&#39;), (&#39;opt101&#39;, &#39;opt101&#39;), (&#39;kim&#39;, &#39;kim&#39;), (&#39;chen&#39;, &#39;chen&#39;), (&#39;ijoe&#39;, &#39;ijoe&#39;), (&#39;testing&#39;, &#39;testing&#39;), (&#39;jakarta&#39;, &#39;jakarta&#39;), (&#39;yang&#39;, &#39;yang&#39;), (&#39;sensors&#39;, &#39;sensors&#39;), (&#39;liu&#39;, &#39;liu&#39;), (&#39;200&#39;, &#39;200&#39;), (&#39;table&#39;, &#39;table&#39;), (&#39;regression&#39;, &#39;regression&#39;), (&#39;2019&#39;, &#39;2019&#39;), (&#39;validation&#39;, &#39;validation&#39;), (&#39;2017&#39;, &#39;2017&#39;), (&#39;r2&#39;, &#39;r2&#39;), (&#39;blood&#39;, &#39;blood&#39;), (&#39;vasconcelos&#39;, &#39;vasconcelos&#39;), (&#39;1&#39;, &#39;1&#39;), (&#39;million&#39;, &#39;million&#39;), (&#39;training&#39;, &#39;training&#39;), (&#39;n&#39;, &#39;n&#39;), (&#39;medicine&#39;, &#39;medicine&#39;), (&#39;newcas&#39;, &#39;newcas&#39;), (&#39;sensor&#39;, &#39;sensor&#39;), (&#39;25&#39;, &#39;25&#39;), (&#39;data&#39;, &#39;data&#39;), (&#39;correlation&#39;, &#39;correlation&#39;), (&#39;2&#39;, &#39;2&#39;), (&#39;100&#39;, &#39;100&#39;), (&#39;glucose&#39;, &#39;glucose&#39;), (&#39;2018&#39;, &#39;2018&#39;), (&#39;bengkulu&#39;, &#39;bengkulu&#39;), (&#39;diabetes&#39;, &#39;diabetes&#39;), (&#39;predictive&#39;, &#39;predictive&#39;), (&#39;optical&#39;, &#39;optical&#39;), (&#39;mondal&#39;, &#39;mondal&#39;), (&#39;energy&#39;, &#39;energy&#39;), (&#39;invasive&#39;, &#39;invasive&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span> <span class="n">word</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unique_words</span><span class="p">)}</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">relabel_nodes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">mapping</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">self_loops</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">nx</span><span class="o">.</span><span class="n">selfloop_edges</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Self-loop edges:&quot;</span><span class="p">,</span> <span class="n">self_loops</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Self-loop edges: [(&#39;2022&#39;, &#39;2022&#39;), (&#39;engineering&#39;, &#39;engineering&#39;), (&#39;2014&#39;, &#39;2014&#39;), (&#39;99&#39;, &#39;99&#39;), (&#39;ahmad&#39;, &#39;ahmad&#39;), (&#39;97&#39;, &#39;97&#39;), (&#39;stratum&#39;, &#39;stratum&#39;), (&#39;stratiﬁcation&#39;, &#39;stratiﬁcation&#39;), (&#39;region&#39;, &#39;region&#39;), (&#39;linear&#39;, &#39;linear&#39;), (&#39;classification&#39;, &#39;classification&#39;), (&#39;opt101&#39;, &#39;opt101&#39;), (&#39;kim&#39;, &#39;kim&#39;), (&#39;chen&#39;, &#39;chen&#39;), (&#39;ijoe&#39;, &#39;ijoe&#39;), (&#39;testing&#39;, &#39;testing&#39;), (&#39;jakarta&#39;, &#39;jakarta&#39;), (&#39;yang&#39;, &#39;yang&#39;), (&#39;sensors&#39;, &#39;sensors&#39;), (&#39;liu&#39;, &#39;liu&#39;), (&#39;200&#39;, &#39;200&#39;), (&#39;table&#39;, &#39;table&#39;), (&#39;regression&#39;, &#39;regression&#39;), (&#39;2019&#39;, &#39;2019&#39;), (&#39;validation&#39;, &#39;validation&#39;), (&#39;2017&#39;, &#39;2017&#39;), (&#39;r2&#39;, &#39;r2&#39;), (&#39;blood&#39;, &#39;blood&#39;), (&#39;vasconcelos&#39;, &#39;vasconcelos&#39;), (&#39;1&#39;, &#39;1&#39;), (&#39;million&#39;, &#39;million&#39;), (&#39;training&#39;, &#39;training&#39;), (&#39;n&#39;, &#39;n&#39;), (&#39;medicine&#39;, &#39;medicine&#39;), (&#39;newcas&#39;, &#39;newcas&#39;), (&#39;sensor&#39;, &#39;sensor&#39;), (&#39;25&#39;, &#39;25&#39;), (&#39;data&#39;, &#39;data&#39;), (&#39;correlation&#39;, &#39;correlation&#39;), (&#39;2&#39;, &#39;2&#39;), (&#39;100&#39;, &#39;100&#39;), (&#39;glucose&#39;, &#39;glucose&#39;), (&#39;2018&#39;, &#39;2018&#39;), (&#39;bengkulu&#39;, &#39;bengkulu&#39;), (&#39;diabetes&#39;, &#39;diabetes&#39;), (&#39;predictive&#39;, &#39;predictive&#39;), (&#39;optical&#39;, &#39;optical&#39;), (&#39;mondal&#39;, &#39;mondal&#39;), (&#39;energy&#39;, &#39;energy&#39;), (&#39;invasive&#39;, &#39;invasive&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Data_Komunitas_FB.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Code Komunitas Facebook</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installasi-pymupdf">Installasi pymupdf</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghubungkan-drive">Menghubungkan Drive</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membaca-paper-dan-membuat-file-txt">Membaca Paper dan Membuat file txt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installasi-nltk">Installasi nltk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installasi-library-nltk">Installasi Library nltk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membaca-file-txt">Membaca file txt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membaca-kalimat">Membaca kalimat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-sekumpulan-data-list-menjadi-bentuk-tabel-dataframe">Mengubah sekumpulan data (list) menjadi bentuk tabel (DataFrame)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-data-di-atas-menjadi-csv">Import data di atas menjadi csv</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#co-occurrence-matrix-matriks-kemunculan-bersama">Co-occurrence Matrix (Matriks Kemunculan Bersama)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installasi-networkx">Installasi networkx</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-data-matriks-tabel-angka-menjadi-struktur-graf-jaringan-network-graph">mengubah data matriks (tabel angka) menjadi struktur Graf Jaringan (Network Graph)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisai-word-graph-node-dengan-label-angka">Visualisai Word Graph Node dengan Label angka</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisai-word-graph-node-dengan-label-kata">Visualisai Word Graph Node dengan Label Kata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-label-titik-node-pada-graf-yang-tadinya-berupa-angka-indeks-0-1-2-kembali-menjadi-kata-aslinya-teks">mengubah label titik (node) pada graf yang tadinya berupa angka indeks (0, 1, 2…) kembali menjadi kata aslinya (teks)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-tingkat-kepentingan-pagerank-setiap-kata-dan-menampilkan-10-kata-kunci-keywords-paling-dominan">menghitung tingkat kepentingan (PageRank) setiap kata dan menampilkan 10 kata kunci (keywords) paling dominan</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
