@@ -1,0 +1,2107 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Code Crawling X Hastag dan Keyword &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Crawling_Hastag_&_Keyword_X';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Word Graph" href="word_graph.html" />
+    <link rel="prev" title="Code Komunitas Facebook" href="Data_Komunitas_FB.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Pengantar Web Mining
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Crawling.html">Crawling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Crawling_PTA.html">Crawling PTA &amp; Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Preprocessing_Crawling_PTA.html">Preprocessing Crawling PTA &amp; Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TF_IDF_Word_Embedding.html">TF-IDF &amp; Word Embedding</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="LDA_with_Gensim.html">LDA With Gensim</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="UTS_PPW.html">UTS PPW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PageRank.html">PageRank</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Code_Web_Usage_Mining.html">Web Usage Mining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Analisa_Clustering.html">Analisa Clustering Data Terakhir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data_Komunitas_FB.html">Code Komunitas Facebook</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Code Crawling X Hastag dan Keyword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="word_graph.html">Word Graph</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FCrawling_Hastag_&_Keyword_X.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Crawling_Hastag_&_Keyword_X.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Code Crawling X Hastag dan Keyword</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-hastag">Crawling Hastag</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-data-crawling-hastag">Menampilkan Data Crawling Hastag</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jumlah-data-hastag-yang-di-dapatkan">Jumlah Data Hastag Yang Di Dapatkan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-keyword">Crawling Keyword</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-data-crawling-keyword">Menampilkan Data Crawling Keyword</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jumlah-data-keyword-yang-di-dapatkan">Jumlah Data Keyword Yang Di Dapatkan</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="code-crawling-x-hastag-dan-keyword">
+<h1>Code Crawling X Hastag dan Keyword<a class="headerlink" href="#code-crawling-x-hastag-dan-keyword" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Twitter Auth Token</span>
+
+<span class="n">twitter_auth_token</span> <span class="o">=</span> <span class="s1">&#39;a9ba977be9ec2929957304c8f300db5d428504aa&#39;</span> <span class="c1"># change this auth token</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import required Python package</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
+
+<span class="c1"># Install Node.js (because tweet-harvest built using Node.js)</span>
+<span class="err">!</span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="err">!</span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">ca</span><span class="o">-</span><span class="n">certificates</span> <span class="n">curl</span> <span class="n">gnupg</span> <span class="n">libatk1</span><span class="mf">.0</span><span class="o">-</span><span class="mi">0</span> <span class="n">libgtk</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">0</span>
+<span class="err">!</span><span class="n">sudo</span> <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">keyrings</span>
+<span class="err">!</span><span class="n">curl</span> <span class="o">-</span><span class="n">fsSL</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">deb</span><span class="o">.</span><span class="n">nodesource</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">gpgkey</span><span class="o">/</span><span class="n">nodesource</span><span class="o">-</span><span class="n">repo</span><span class="o">.</span><span class="n">gpg</span><span class="o">.</span><span class="n">key</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">gpg</span> <span class="o">--</span><span class="n">dearmor</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">keyrings</span><span class="o">/</span><span class="n">nodesource</span><span class="o">.</span><span class="n">gpg</span>
+
+<span class="err">!</span><span class="n">NODE_MAJOR</span><span class="o">=</span><span class="mi">20</span> <span class="o">&amp;&amp;</span> <span class="n">echo</span> <span class="s2">&quot;deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main&quot;</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">tee</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">sources</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">nodesource</span><span class="o">.</span><span class="n">list</span>
+
+<span class="err">!</span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="err">!</span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">nodejs</span> <span class="o">-</span><span class="n">y</span>
+
+<span class="err">!</span><span class="n">node</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pandas in /usr/local/lib/python3.12/dist-packages (2.2.2)
+Requirement already satisfied: numpy&gt;=1.26.0 in /usr/local/lib/python3.12/dist-packages (from pandas) (2.0.2)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /usr/local/lib/python3.12/dist-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.12/dist-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata&gt;=2022.7 in /usr/local/lib/python3.12/dist-packages (from pandas) (2025.2)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.17.0)
+Hit:1 https://cli.github.com/packages stable InRelease
+Hit:2 https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/ InRelease
+Hit:3 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64  InRelease
+Hit:4 https://deb.nodesource.com/node_20.x nodistro InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:8 https://r2u.stat.illinois.edu/ubuntu jammy InRelease
+Hit:9 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:10 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu jammy InRelease
+Hit:11 https://ppa.launchpadcontent.net/graphics-drivers/ppa/ubuntu jammy InRelease
+Hit:12 https://ppa.launchpadcontent.net/ubuntugis/ppa/ubuntu jammy InRelease
+Reading package lists... Done
+W: Skipping acquire of configured file &#39;main/source/Sources&#39; as repository &#39;https://r2u.stat.illinois.edu/ubuntu jammy InRelease&#39; does not seem to provide it (sources.list entry misspelt?)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+libatk1.0-0 is already the newest version (2.36.0-3build1).
+ca-certificates is already the newest version (20240203~22.04.1).
+curl is already the newest version (7.81.0-1ubuntu1.21).
+gnupg is already the newest version (2.2.27-3ubuntu2.4).
+libgtk-3-0 is already the newest version (3.24.33-1ubuntu2.2).
+0 upgraded, 0 newly installed, 0 to remove and 62 not upgraded.
+gpg: cannot open &#39;/dev/tty&#39;: No such device or address
+curl: (23) Failed writing body
+deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:4 https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/ InRelease
+Hit:5 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64  InRelease
+Hit:6 https://cli.github.com/packages stable InRelease
+Hit:7 https://deb.nodesource.com/node_20.x nodistro InRelease
+Hit:8 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:9 https://r2u.stat.illinois.edu/ubuntu jammy InRelease
+Hit:10 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu jammy InRelease
+Hit:11 https://ppa.launchpadcontent.net/graphics-drivers/ppa/ubuntu jammy InRelease
+Hit:12 https://ppa.launchpadcontent.net/ubuntugis/ppa/ubuntu jammy InRelease
+Reading package lists... Done
+W: Skipping acquire of configured file &#39;main/source/Sources&#39; as repository &#39;https://r2u.stat.illinois.edu/ubuntu jammy InRelease&#39; does not seem to provide it (sources.list entry misspelt?)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+nodejs is already the newest version (20.19.6-1nodesource1).
+0 upgraded, 0 newly installed, 0 to remove and 62 not upgraded.
+v20.19.6
+</pre></div>
+</div>
+</div>
+</div>
+<section id="crawling-hastag">
+<h2>Crawling Hastag<a class="headerlink" href="#crawling-hastag" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crawl Data</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;hastagcrwl.csv&#39;</span>
+<span class="n">search_keyword</span> <span class="o">=</span> <span class="s1">&#39;#prayforsumatra lang:id&#39;</span>
+<span class="n">limit</span> <span class="o">=</span> <span class="mi">500</span>
+
+<span class="err">!</span><span class="n">npx</span> <span class="o">-</span><span class="n">y</span> <span class="n">tweet</span><span class="o">-</span><span class="n">harvest</span><span class="o">@</span><span class="mf">2.6.1</span> <span class="o">-</span><span class="n">o</span> <span class="s2">&quot;</span><span class="si">{filename}</span><span class="s2">&quot;</span> <span class="o">-</span><span class="n">s</span> <span class="s2">&quot;</span><span class="si">{search_keyword}</span><span class="s2">&quot;</span> <span class="o">--</span><span class="n">tab</span> <span class="s2">&quot;LATEST&quot;</span> <span class="o">-</span><span class="n">l</span> <span class="p">{</span><span class="n">limit</span><span class="p">}</span> <span class="o">--</span><span class="n">token</span> <span class="p">{</span><span class="n">twitter_auth_token</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>⠙⠹⠸⠼⠴⠦<span class=" -Color -Color-Bold -Color-Bold-Green">Tweet Harvest [v2.6.1]</span>
+
+<span class=" -Color -Color-Blue">Research by </span><span class=" -Color -Color-Bold -Color-Bold-Blue">Helmi Satria</span>
+<span class=" -Color -Color-Blue">Use it for Educational Purposes only!</span>
+
+<span class=" -Color -Color-Yellow">This script uses Chromium Browser to crawl data from Twitter with </span><span class=" -Color -Color-Bold -Color-Bold-Yellow">your Twitter auth token</span><span class=" -Color -Color-Yellow">.</span>
+<span class=" -Color -Color-Yellow">Please enter your Twitter auth token when prompted.</span>
+
+<span class=" -Color -Color-Bold -Color-Bold-Red">Note:</span> Keep your access token secret! Don&#39;t share it with anyone else.
+<span class=" -Color -Color-Bold -Color-Bold-Red">Note:</span> This script only runs on your local device.
+
+
+<span class=" -Color -Color-Blue">Opening twitter search page...</span>
+
+
+-- Scrolling... (1) (2) (3)
+<span class=" -Color -Color-Yellow">Filling in keywords: #prayforsumatra lang:id</span>
+
+ (4)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 20</span>
+
+-- Scrolling... (1) (2) (3) (4) (5)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 40</span>
+
+-- Scrolling... (1) (2)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 59</span>
+
+-- Scrolling... (1) (2) (3) (4) (5) (6)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 79</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 99</span>
+
+-- Scrolling... (1) (2)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 118</span>
+
+--Taking a break, waiting for 10 seconds...
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 136</span>
+
+-- Scrolling... (1) (2)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 156</span>
+
+-- Scrolling... (1) (2)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 171</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 191</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 211</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 224</span>
+
+--Taking a break, waiting for 10 seconds...
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 244</span>
+
+-- Scrolling... (1) (2)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 257</span>
+
+-- Scrolling... (1) (2) (3)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 277</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 288</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 307</span>
+
+-- Scrolling... (1) (2)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 327</span>
+
+--Taking a break, waiting for 10 seconds...
+
+-- Scrolling... (1) (2)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 347</span>
+
+-- Scrolling... (1) (2)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 363</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 380</span>
+
+-- Scrolling... (1) (2)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 400</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 418</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 438</span>
+
+--Taking a break, waiting for 10 seconds...
+
+-- Scrolling... (1) (2)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 458</span>
+
+-- Scrolling... (1) (2)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 476</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 496</span>
+
+-- Scrolling... (1) (2) (3) (4) (5) (6) (7) (8) (9) (10)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/hastagcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 515</span>
+Got 515 tweets, done scrolling...
+⠙
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menampilkan-data-crawling-hastag">
+<h2>Menampilkan Data Crawling Hastag<a class="headerlink" href="#menampilkan-data-crawling-hastag" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Specify the path to your CSV file</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;tweets-data/hastagcrwl.csv&quot;</span>
+
+<span class="c1"># Read the CSV file into a pandas DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+
+<span class="c1"># Display the DataFrame</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-f893e81c-0917-44e2-b34e-1c21b3961a1b" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>conversation_id_str</th>
+      <th>created_at</th>
+      <th>favorite_count</th>
+      <th>full_text</th>
+      <th>id_str</th>
+      <th>image_url</th>
+      <th>in_reply_to_screen_name</th>
+      <th>lang</th>
+      <th>location</th>
+      <th>quote_count</th>
+      <th>reply_count</th>
+      <th>retweet_count</th>
+      <th>tweet_url</th>
+      <th>user_id_str</th>
+      <th>username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1996299250289000613</td>
+      <td>Wed Dec 03 19:23:25 +0000 2025</td>
+      <td>3</td>
+      <td>OPEN DONASI PATUNGAN Warga Bantu Warga #PrayF...</td>
+      <td>1996299250289000613</td>
+      <td>https://pbs.twimg.com/media/G7RHhYnbkAANYzs.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199629925028900...</td>
+      <td>1794060249722417152</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1996297413288743352</td>
+      <td>Wed Dec 03 19:16:07 +0000 2025</td>
+      <td>0</td>
+      <td>#PrayForSumatra #AllEyesOnSumatra SUMATRA DAR...</td>
+      <td>1996297413288743352</td>
+      <td>https://pbs.twimg.com/ext_tw_video_thumb/19962...</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199629741328874...</td>
+      <td>1794060249722417152</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1996292158622765408</td>
+      <td>Wed Dec 03 18:55:14 +0000 2025</td>
+      <td>2</td>
+      <td>OPEN DONASI Halo Semuanya PATUNGAN Warga Bant...</td>
+      <td>1996292158622765408</td>
+      <td>https://pbs.twimg.com/media/G7RBIzmagAAa3xs.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>https://x.com/undefined/status/199629215862276...</td>
+      <td>1794060249722417152</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1996283654675570795</td>
+      <td>Wed Dec 03 18:21:27 +0000 2025</td>
+      <td>0</td>
+      <td>Jowo ora ono mundure #PrayforSumatra https://t...</td>
+      <td>1996283654675570795</td>
+      <td>https://pbs.twimg.com/amplify_video_thumb/1996...</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199628365467557...</td>
+      <td>51487189</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1996262528230588484</td>
+      <td>Wed Dec 03 16:57:30 +0000 2025</td>
+      <td>1</td>
+      <td>PATUNGAN Warga Bantu Warga #PrayForSumatra #Al...</td>
+      <td>1996262528230588484</td>
+      <td>https://pbs.twimg.com/media/G7QmMHuboAAbYYs.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199626252823058...</td>
+      <td>1794060249722417152</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>510</th>
+      <td>1994305583860564146</td>
+      <td>Fri Nov 28 07:21:18 +0000 2025</td>
+      <td>0</td>
+      <td>Kami PAYPAW KaryaTulis mau mengucapkan Turut b...</td>
+      <td>1994305583860564146</td>
+      <td>https://pbs.twimg.com/media/G60yWotboAAg5mH.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199430558386056...</td>
+      <td>1359621313661308931</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>511</th>
+      <td>1994303194500092286</td>
+      <td>Fri Nov 28 07:11:48 +0000 2025</td>
+      <td>0</td>
+      <td>Bencana banjir melanda Sumatra Aceh Padang. DA...</td>
+      <td>1994303194500092286</td>
+      <td>https://pbs.twimg.com/ext_tw_video_thumb/19943...</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199430319450009...</td>
+      <td>1475140869825073152</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>512</th>
+      <td>1994301803236880791</td>
+      <td>Fri Nov 28 07:06:16 +0000 2025</td>
+      <td>79</td>
+      <td>#PrayforAceh #PrayforSumatra Bencana banjir ba...</td>
+      <td>1994301803236880791</td>
+      <td>https://pbs.twimg.com/amplify_video_thumb/1994...</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>2</td>
+      <td>54</td>
+      <td>https://x.com/undefined/status/199430180323688...</td>
+      <td>1269826533096448001</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>513</th>
+      <td>1994300285880328697</td>
+      <td>Fri Nov 28 07:00:15 +0000 2025</td>
+      <td>1</td>
+      <td>#PrayForSumatra Semoga selamat semuanya bagi k...</td>
+      <td>1994300285880328697</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199430028588032...</td>
+      <td>1923313321501155328</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>514</th>
+      <td>1994298561542922305</td>
+      <td>Fri Nov 28 06:53:24 +0000 2025</td>
+      <td>0</td>
+      <td>Opinions are just opinions. Kalau menurut ku h...</td>
+      <td>1994298561542922305</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199429856154292...</td>
+      <td>1209335535124144130</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>515 rows × 15 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f893e81c-0917-44e2-b34e-1c21b3961a1b')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-f893e81c-0917-44e2-b34e-1c21b3961a1b button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-f893e81c-0917-44e2-b34e-1c21b3961a1b');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-c98a1f97-37c4-4068-ae84-53dcbc18374c">
+      <button class="colab-df-quickchart" onclick="quickchart('df-c98a1f97-37c4-4068-ae84-53dcbc18374c')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-c98a1f97-37c4-4068-ae84-53dcbc18374c button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+  <div id="id_6b0e02d0-7e03-4ddc-9793-5471b6d7c5ed">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('df')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_6b0e02d0-7e03-4ddc-9793-5471b6d7c5ed button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('df');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+<section id="jumlah-data-hastag-yang-di-dapatkan">
+<h2>Jumlah Data Hastag Yang Di Dapatkan<a class="headerlink" href="#jumlah-data-hastag-yang-di-dapatkan" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cek jumlah data yang didapatkan</span>
+
+<span class="n">num_tweets</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah tweet dalam dataframe adalah </span><span class="si">{</span><span class="n">num_tweets</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah tweet dalam dataframe adalah 515.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="crawling-keyword">
+<h2>Crawling Keyword<a class="headerlink" href="#crawling-keyword" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crawl Data</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;keywordcrwl.csv&#39;</span>
+<span class="n">search_keyword</span> <span class="o">=</span> <span class="s1">&#39;banjir sumatra lang:id&#39;</span>
+<span class="n">limit</span> <span class="o">=</span> <span class="mi">500</span>
+
+<span class="err">!</span><span class="n">npx</span> <span class="o">-</span><span class="n">y</span> <span class="n">tweet</span><span class="o">-</span><span class="n">harvest</span><span class="o">@</span><span class="mf">2.6.1</span> <span class="o">-</span><span class="n">o</span> <span class="s2">&quot;</span><span class="si">{filename}</span><span class="s2">&quot;</span> <span class="o">-</span><span class="n">s</span> <span class="s2">&quot;</span><span class="si">{search_keyword}</span><span class="s2">&quot;</span> <span class="o">--</span><span class="n">tab</span> <span class="s2">&quot;LATEST&quot;</span> <span class="o">-</span><span class="n">l</span> <span class="p">{</span><span class="n">limit</span><span class="p">}</span> <span class="o">--</span><span class="n">token</span> <span class="p">{</span><span class="n">twitter_auth_token</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>⠙⠹⠸⠼⠴⠦<span class=" -Color -Color-Bold -Color-Bold-Green">Tweet Harvest [v2.6.1]</span>
+
+<span class=" -Color -Color-Blue">Research by </span><span class=" -Color -Color-Bold -Color-Bold-Blue">Helmi Satria</span>
+<span class=" -Color -Color-Blue">Use it for Educational Purposes only!</span>
+
+<span class=" -Color -Color-Yellow">This script uses Chromium Browser to crawl data from Twitter with </span><span class=" -Color -Color-Bold -Color-Bold-Yellow">your Twitter auth token</span><span class=" -Color -Color-Yellow">.</span>
+<span class=" -Color -Color-Yellow">Please enter your Twitter auth token when prompted.</span>
+
+<span class=" -Color -Color-Bold -Color-Bold-Red">Note:</span> Keep your access token secret! Don&#39;t share it with anyone else.
+<span class=" -Color -Color-Bold -Color-Bold-Red">Note:</span> This script only runs on your local device.
+
+
+<span class=" -Color -Color-Blue">Opening twitter search page...</span>
+
+
+-- Scrolling... (1) (2)
+<span class=" -Color -Color-Yellow">Filling in keywords: banjir sumatra lang:id</span>
+
+ (3) (4)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 20</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 40</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 60</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 80</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 100</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 120</span>
+
+--Taking a break, waiting for 10 seconds...
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 140</span>
+
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 160</span>
+
+-- Scrolling... (1)[v2.6.1] Error parsing response json: {&quot;_type&quot;:&quot;Response&quot;,&quot;_guid&quot;:&quot;response@ded1f2fdc789a870b3973ef0ca4acd67&quot;}
+[v2.6.1] Most likely, you have already exceeded the Twitter rate limit. Read more on https://x.com/elonmusk/status/1675187969420828672.
+[v2.6.1] Error parsing response json: {&quot;_type&quot;:&quot;Response&quot;,&quot;_guid&quot;:&quot;response@6203cdd3b8a28c3f166f30bb1f798c7d&quot;}
+[v2.6.1] Most likely, you have already exceeded the Twitter rate limit. Read more on https://x.com/elonmusk/status/1675187969420828672.
+[v2.6.1] Error parsing response json: {&quot;_type&quot;:&quot;Response&quot;,&quot;_guid&quot;:&quot;response@d386c6546d40fc5d30e9c4c100ef0f78&quot;}
+[v2.6.1] Most likely, you have already exceeded the Twitter rate limit. Read more on https://x.com/elonmusk/status/1675187969420828672.
+[v2.6.1] Error parsing response json: {&quot;_type&quot;:&quot;Response&quot;,&quot;_guid&quot;:&quot;response@2e15c581ae84e7a51fa879a4b8438987&quot;}
+[v2.6.1] Most likely, you have already exceeded the Twitter rate limit. Read more on https://x.com/elonmusk/status/1675187969420828672.
+[v2.6.1] Error parsing response json: {&quot;_type&quot;:&quot;Response&quot;,&quot;_guid&quot;:&quot;response@d29684064e94635865480559694d1382&quot;}
+[v2.6.1] Most likely, you have already exceeded the Twitter rate limit. Read more on https://x.com/elonmusk/status/1675187969420828672.
+[v2.6.1] Error parsing response json: {&quot;_type&quot;:&quot;Response&quot;,&quot;_guid&quot;:&quot;response@2cf16a2d7626e94bb1cc4007f4951903&quot;}
+[v2.6.1] Most likely, you have already exceeded the Twitter rate limit. Read more on https://x.com/elonmusk/status/1675187969420828672.
+[v2.6.1] Error parsing response json: {&quot;_type&quot;:&quot;Response&quot;,&quot;_guid&quot;:&quot;response@be60ac7f0fb59ac52e9b9c45bb071804&quot;}
+[v2.6.1] Most likely, you have already exceeded the Twitter rate limit. Read more on https://x.com/elonmusk/status/1675187969420828672.
+[v2.6.1] Error parsing response json: {&quot;_type&quot;:&quot;Response&quot;,&quot;_guid&quot;:&quot;response@e4a75cc2b010f3dc4b40d4ca0707a5b8&quot;}
+[v2.6.1] Most likely, you have already exceeded the Twitter rate limit. Read more on https://x.com/elonmusk/status/1675187969420828672.
+[v2.6.1] Error parsing response json: {&quot;_type&quot;:&quot;Response&quot;,&quot;_guid&quot;:&quot;response@5d8f90961ed245c3e2694c85a69483f2&quot;}
+[v2.6.1] Most likely, you have already exceeded the Twitter rate limit. Read more on https://x.com/elonmusk/status/1675187969420828672.
+
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 180</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 200</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 220</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 240</span>
+
+--Taking a break, waiting for 10 seconds...
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 260</span>
+
+-- Scrolling... (1) (2) (3) (4)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 280</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 300</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 320</span>
+
+-- Scrolling... (1) (2)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 340</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 359</span>
+
+--Taking a break, waiting for 10 seconds...
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 373</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 393</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 413</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 432</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 452</span>
+
+-- Scrolling... (1)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 467</span>
+
+--Taking a break, waiting for 10 seconds...
+
+-- Scrolling... (1) (2)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 487</span>
+
+-- Scrolling... (1) (2) (3)
+
+<span class=" -Color -Color-Blue">Your tweets saved to: /content/tweets-data/keywordcrwl.csv</span>
+<span class=" -Color -Color-Yellow">Total tweets saved: 507</span>
+Got 507 tweets, done scrolling...
+⠙
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="menampilkan-data-crawling-keyword">
+<h2>Menampilkan Data Crawling Keyword<a class="headerlink" href="#menampilkan-data-crawling-keyword" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Specify the path to your CSV file</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;tweets-data/keywordcrwl.csv&quot;</span>
+
+<span class="c1"># Read the CSV file into a pandas DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+
+<span class="c1"># Display the DataFrame</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-a297ee07-358c-4764-9c71-a7a7077d6868" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>conversation_id_str</th>
+      <th>created_at</th>
+      <th>favorite_count</th>
+      <th>full_text</th>
+      <th>id_str</th>
+      <th>image_url</th>
+      <th>in_reply_to_screen_name</th>
+      <th>lang</th>
+      <th>location</th>
+      <th>quote_count</th>
+      <th>reply_count</th>
+      <th>retweet_count</th>
+      <th>tweet_url</th>
+      <th>user_id_str</th>
+      <th>username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1996243813220679836</td>
+      <td>Wed Dec 03 22:54:47 +0000 2025</td>
+      <td>0</td>
+      <td>@tanyarlfes org org begini ya allah yg harusny...</td>
+      <td>1996352444067131738</td>
+      <td>NaN</td>
+      <td>tanyarlfes</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199635244406713...</td>
+      <td>1343107554457501696</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1996351023460630853</td>
+      <td>Wed Dec 03 22:49:09 +0000 2025</td>
+      <td>0</td>
+      <td>dosennya cowo gue bilang kalo indo tuh gak ber...</td>
+      <td>1996351023460630853</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199635102346063...</td>
+      <td>1762411384644726784</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1995990754121146423</td>
+      <td>Wed Dec 03 22:48:03 +0000 2025</td>
+      <td>0</td>
+      <td>@sapi_terbang15 @cokicokic0k @rrandomlyyyy Unt...</td>
+      <td>1996350749417377970</td>
+      <td>NaN</td>
+      <td>sapi_terbang15</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199635074941737...</td>
+      <td>1720665183188922368</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1995324731915124772</td>
+      <td>Wed Dec 03 22:45:55 +0000 2025</td>
+      <td>0</td>
+      <td>@hansdavidian Bencana sebenarnya bukan banjir ...</td>
+      <td>1996350210474459578</td>
+      <td>NaN</td>
+      <td>hansdavidian</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199635021047445...</td>
+      <td>53919260</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1996348079637942726</td>
+      <td>Wed Dec 03 22:37:27 +0000 2025</td>
+      <td>0</td>
+      <td>Banjir Sumatra bukanan lah bencana alam tapi b...</td>
+      <td>1996348079637942726</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199634807963794...</td>
+      <td>1321478677167706112</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>502</th>
+      <td>1996058496316703203</td>
+      <td>Wed Dec 03 03:26:45 +0000 2025</td>
+      <td>0</td>
+      <td>Presiden Prabowo blusukan ke wilayah banjir &amp;a...</td>
+      <td>1996058496316703203</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199605849631670...</td>
+      <td>1696426676065038336</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>503</th>
+      <td>1996058263335698751</td>
+      <td>Wed Dec 03 03:25:49 +0000 2025</td>
+      <td>19</td>
+      <td>Artis sekaligus anggota DPR Fraksi Partai Aman...</td>
+      <td>1996058263335698751</td>
+      <td>https://pbs.twimg.com/media/G7NsZ85asAEZQat.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>7</td>
+      <td>25</td>
+      <td>5</td>
+      <td>https://x.com/undefined/status/199605826333569...</td>
+      <td>23343960</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>504</th>
+      <td>1995799974337298479</td>
+      <td>Wed Dec 03 03:25:27 +0000 2025</td>
+      <td>0</td>
+      <td>@Fujiwara1412 @SemestaKapal @IndoPopBase @muha...</td>
+      <td>1996058172285698143</td>
+      <td>NaN</td>
+      <td>Fujiwara1412</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199605817228569...</td>
+      <td>1720665183188922368</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>505</th>
+      <td>1996058078710837515</td>
+      <td>Wed Dec 03 03:25:05 +0000 2025</td>
+      <td>0</td>
+      <td>Artis sekaligus anggota DPR Fraksi Partai Aman...</td>
+      <td>1996058078710837515</td>
+      <td>https://pbs.twimg.com/media/G7NsPQNa8AA8AZx.jpg</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199605807871083...</td>
+      <td>171833463</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>506</th>
+      <td>1996057803480596843</td>
+      <td>Wed Dec 03 03:24:00 +0000 2025</td>
+      <td>0</td>
+      <td>Banjir bandang karena kerusakan ekologis bukan...</td>
+      <td>1996057806500495699</td>
+      <td>NaN</td>
+      <td>thestanceid</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199605780650049...</td>
+      <td>1820883734310350858</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>507 rows × 15 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-a297ee07-358c-4764-9c71-a7a7077d6868')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-a297ee07-358c-4764-9c71-a7a7077d6868 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-a297ee07-358c-4764-9c71-a7a7077d6868');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-e60a6f69-2983-4788-b7d2-f7dac858b452">
+      <button class="colab-df-quickchart" onclick="quickchart('df-e60a6f69-2983-4788-b7d2-f7dac858b452')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-e60a6f69-2983-4788-b7d2-f7dac858b452 button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+  <div id="id_5c7e70a7-1675-41fb-88d8-b5a6c2a6807d">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('df')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_5c7e70a7-1675-41fb-88d8-b5a6c2a6807d button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('df');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+<section id="jumlah-data-keyword-yang-di-dapatkan">
+<h2>Jumlah Data Keyword Yang Di Dapatkan<a class="headerlink" href="#jumlah-data-keyword-yang-di-dapatkan" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cek jumlah data yang didapatkan</span>
+
+<span class="n">num_tweets</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah tweet dalam dataframe adalah </span><span class="si">{</span><span class="n">num_tweets</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah tweet dalam dataframe adalah 507.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Data_Komunitas_FB.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Code Komunitas Facebook</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="word_graph.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Word Graph</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-hastag">Crawling Hastag</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-data-crawling-hastag">Menampilkan Data Crawling Hastag</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jumlah-data-hastag-yang-di-dapatkan">Jumlah Data Hastag Yang Di Dapatkan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-keyword">Crawling Keyword</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menampilkan-data-crawling-keyword">Menampilkan Data Crawling Keyword</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jumlah-data-keyword-yang-di-dapatkan">Jumlah Data Keyword Yang Di Dapatkan</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
